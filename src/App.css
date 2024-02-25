@@ -1,0 +1,953 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat); /* TildaSans-Regular */
+@font-face {
+    font-family: 'Tilda Sans Regular';
+    src: url('TildaSans.07Web2/TildaSans-Regular/TildaSans-Regular.woff2') format('woff2'), /* Specify the path to your .woff2 font file */
+    url('TildaSans.07Web2/TildaSans-Regular/TildaSans-Regular.woff') format('woff'); /* Specify the path to your .woff font file */
+}
+
+/* TildaSans-Bold */
+@font-face {
+    font-family: 'Tilda Sans Bold';
+    src: url('TildaSans.07Web2/TildaSans-Bold/TildaSans-Bold.woff2') format('woff2'), /* Specify the path to your .woff2 font file */
+    url('TildaSans.07Web2/TildaSans-Bold/TildaSans-Bold.woff') format('woff'); /* Specify the path to your .woff font file */
+    font-weight: bold;
+}
+
+/* TildaSans-Semibold */
+@font-face {
+    font-family: 'Tilda Sans Semibold';
+    src: url('TildaSans.07Web2/TildaSans-Semibold/TildaSans-Semibold.woff2') format('woff2'), /* Specify the path to your .woff2 font file */
+    url('TildaSans.07Web2/TildaSans-Semibold/TildaSans-Semibold.woff') format('woff'); /* Specify the path to your .woff font file */
+    font-weight: 600; /* This is typically considered semi-bold */
+}
+
+/* TildaSans-Medium */
+@font-face {
+    font-family: 'Tilda Sans Medium';
+    src: url('TildaSans.07Web2/TildaSans-Medium/TildaSans-Medium.woff2') format('woff2'), /* Specify the path to your .woff2 font file */
+    url('TildaSans.07Web2/TildaSans-Medium/TildaSans-Medium.woff') format('woff'); /* Specify the path to your .woff font file */
+    font-weight: 500;
+}
+
+/* TildaSans-Light */
+@font-face {
+    font-family: 'Tilda Sans Light';
+    src: url('TildaSans.07Web2/TildaSans-Light/TildaSans-Light.woff2') format('woff2'), /* Specify the path to your .woff2 font file */
+    url('TildaSans.07Web2/TildaSans-Light/TildaSans-Light.woff') format('woff'); /* Specify the path to your .woff font file */
+    font-weight: 300;
+}
+
+/* TildaSans-ExtraBold */
+@font-face {
+    font-family: 'Tilda Sans ExtraBold';
+    src: url('TildaSans.07Web2/TildaSans-ExtraBold/TildaSans-ExtraBold.woff2') format('woff2'), /* Specify the path to your .woff2 font file */
+    url('TildaSans.07Web2/TildaSans-ExtraBold/TildaSans-ExtraBold.woff') format('woff'); /* Specify the path to your .woff font file */
+    font-weight: 800;
+}
+
+/* TildaSans-Black */
+@font-face {
+    font-family: 'Tilda Sans Black';
+    src: url('TildaSans.07Web2/TildaSans-Black/TildaSans-Black.woff2') format('woff2'), /* Specify the path to your .woff2 font file */
+    url('TildaSans.07Web2/TildaSans-Black/TildaSans-Black.woff') format('woff'); /* Specify the path to your .woff font file */
+    font-weight: 900;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Tilda Sans Regular', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+.wrapper{
+    margin: 0 5%;
+}
+desktop-nav{
+    margin: 40px 80px 0 80px;
+}
+.nav-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+    height: 30px;
+}
+.search{
+    height: 30px;
+    width: 150px;
+}
+.responsive-nav-top-btn{
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 50px;
+    border-radius: 8px;
+    color: #6D2CC1!important;
+    font-size: 14px;
+    border: 1px #6D2CC1 solid;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.nav-top-btn{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 8px;
+    color: #6D2CC1;
+    font-size: 22px;
+    border: 1px #6D2CC1 solid;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.nav-top-btn:hover{
+    color: #faf8f8;
+    background-color: #6D2CC1;
+}
+.nav-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+.nav-bottom > div{
+    font-size: 22px;
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: black;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.nav-bottom > div:hover{
+    /*box-shadow: inset 100px 0 100px 0 #6D2CC1;*/
+    /*color: white;*/
+}
+.intro-img{
+    margin-top: 50px;
+    width: 100%;
+    height: 650px; /* Set the height as needed */
+    background-image: url('photos/intro-img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*border: black 0.2px solid;*/
+    border-radius: 8px;
+    display: flex;
+    align-items: end;
+}
+.intro-img-divs{
+    margin: 0 0 40px 80px;
+    width: 100%;
+    margin-right: 120px;
+}
+.intro-img-first-txt{
+    color: aliceblue;
+    font-size: 2em;
+    font-weight: lighter;
+    margin-bottom: 25px;
+
+}
+.intro-img-second-txt{
+    color: aliceblue;
+    font-size: 2.2em;
+    font-weight: bold;
+    width: 70%;
+    margin-bottom: 35px;
+}
+.catalog-btn{
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: #6D2CC1;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+
+:root {
+    --hint: #faf8f8;
+    --turqoise: #17ead9;
+    --cornflower-blue: #6078ea;
+    --tundora: #4b4848;
+    --electric-violet: #7c26f8;
+    --snappy: cubic-bezier(0.694, 0.048, 0.335, 1);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color-1 {
+    0% {
+        background-color: #eb73b9;
+    }
+    100% {
+        background-color: #17ead9;
+    }
+}
+
+::selection {
+    background: var(--cornflower-blue);
+    color: white;
+    text-shadow: none;
+}
+
+
+
+.field-container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+
+}
+
+.icons-container {
+    position: absolute;
+    top: 11px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+}
+
+.icon-close {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 75%;
+    height: 75%;
+    opacity: 0;
+    cursor: pointer;
+    transform: translateX(-200%);
+    border-radius: 50%;
+    transition: opacity 0.25s ease, transform 0.43s var(--snappy);
+}
+
+.icon-close:before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border: 2px solid transparent;
+    border-top-color: var(--cornflower-blue);
+    border-left-color: var(--cornflower-blue);
+    border-bottom-color: var(--cornflower-blue);
+    transition: opacity 0.2s ease;
+}
+
+.x-up,
+.x-down {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.x-up:before,
+.x-up:after,
+.x-down:before,
+.x-down:after {
+    content: "";
+    position: absolute;
+    background-color: var(--cornflower-blue);
+}
+
+.x-up:before,
+.x-down:before {
+    width: 50%;
+    height: 2px;
+}
+
+.x-up:after,
+.x-down:after {
+    width: 50%;
+    height: 2px;
+}
+
+.x-up:before {
+    bottom: 2px;
+    left: 3px;
+    transform: rotate(45deg);
+}
+
+.x-up:after {
+    bottom: 2px;
+    right: 0px;
+    transform: rotate(-45deg);
+}
+
+.x-down:before {
+    top: 5px;
+    left: 4px;
+    transform: rotate(-45deg);
+}
+
+.x-down:after {
+    top: 5px;
+    right: 1px;
+    transform: rotate(45deg);
+}
+
+.icon-close.is-type:before {
+    opacity: 1;
+    animation: spin 0.85s infinite;
+}
+
+.icon-close.is-type .x-up:before,
+.icon-close.is-type .x-up:after {
+    animation: color-1 0.85s infinite;
+}
+
+.icon-close.is-type .x-up:after {
+    animation-delay: 0.3s;
+}
+
+.icon-close.is-type .x-down:before,
+.icon-close.is-type .x-down:after {
+    animation: color-1 0.85s infinite;
+}
+
+.icon-close.is-type .x-down:before {
+    animation-delay: 0.2s;
+}
+
+.icon-close.is-type .x-down:after {
+    animation-delay: 0.1s;
+}
+
+.icon-search {
+    position: relative;
+    top: 5px;
+    left: 8px;
+    width: 50%;
+    height: 50%;
+    opacity: 1;
+    border-radius: 50%;
+    /*border: 3px solid mix(var(--cornflower-blue), white, 35%);*/
+}
+
+.icon-search:after {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    right: -2px;
+    width: 4px;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+    height: 10px;
+    /*background-color: mix(var(--cornflower-blue), white, 35%);*/
+}
+
+.field {
+    border: 1px #D5D5D5 solid;
+    width: 150px;
+    height: 100%;
+    padding: 5px 10px 5px 20px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0px 8px 15px rgba(var(--tundora), 0.1);
+    transition: all 0.4s ease;
+}
+
+.field:focus {
+    outline: none;
+    box-shadow: 0px 9px 20px rgba(var(--tundora), 0.3);
+}
+
+.field:focus + .icons-container .icon-close {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.field:focus + .icons-container .icon-search {
+    opacity: 0;
+    transform: translateX(200%);
+}
+
+.m-lr80{
+    margin: 0 80px;
+}
+
+.unit-label{
+    font-size: 36px;
+    margin: 50px 0;
+}
+.about-company-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-company-image{
+    width: 40%;
+}
+.about-company-texts{
+    width: 40%;
+}
+.about-company-text{
+    font-size: 20px;
+}
+.about-company-text-second{
+    margin-top: 35px;
+}
+.about-benefits-body{
+    display: flex;
+    align-items: end;
+}
+.about-benefits-body-container{
+    margin: 0 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+}
+.about-benefits-body-container-text{
+    font-size: 24px;
+    margin-right: 45px;
+}
+.about-benefits-body-container-first{
+    width: 33%;
+    height: 300px;
+    background-color: #DFF6FF;
+}
+.about-benefits-body-container-second{
+    width: 33%;
+    height: 275px;
+    background-color: #F2E8FF;
+}
+.about-benefits-body-container-third{
+    width: 33%;
+    height: 320px;
+    background-color: #FFEEE2;
+}
+.about-benefits-body-container-img{
+    width: 24%;
+}
+.catalog{
+    margin-top: 25px;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.products-container{
+    width: 23%;
+    height: 200px;
+    background-image: url("./photos/products/КабелиСиловые.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 1%;
+    display: flex;
+    align-items: end;
+    border-radius: 9px;
+}
+.product{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    margin: 10%;
+}
+.product-name{
+    font-size: 20px;
+}
+.goto-img{
+    width: 14px;
+    height: 14px;
+}
+.order-section{
+    max-width: 100%;
+    margin-top: 25px;
+    background-color: #E8F4FF;
+    border-radius: 19px;
+}
+.order-section-wrapper{
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+.order-section-main-txt{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 55px;
+}
+.order-section-description-txt{
+    max-width: 40%;
+    font-size: 1.5rem;
+    margin-bottom: 55px;
+    font-weight: 400;
+}
+.order-section-inputs{
+    display: flex;
+    margin-bottom: 15px;
+}
+.order-section-inputs input:first-child {
+    margin-left: 0;
+}
+.order-input{
+    margin: 15px;
+    padding: 5px 25px;
+    font-size: 24px;
+    border-radius: 19px;
+    height: 80px;
+    width: calc(33% - 25px);
+    color: #AAAAAA;
+    background-color: #FFFFFF;
+    border: #F0F0F0 1px solid;
+}
+.order-section-take-file{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #faf8f8;
+    color: #6D2CC1;
+    font-size: 22px;
+    border: 1px #6D2CC1 solid;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    margin-bottom: 16px;
+}
+.order-section-take-file:hover{
+    color: #faf8f8;
+    background-color: #6D2CC1;
+}
+.order-section-submit-info{
+    width: 40%;
+    color: #AEAEAE;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+.order-section-send-btn-group{
+    display: flex;
+    align-items: center;
+}
+.order-section-send-btn{
+    max-width: 350px;
+    width: 40%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #6D2CC1;
+    color: #faf8f8;
+    font-size: 22px;
+    border: 1px #6D2CC1 solid;
+    margin-right: 45px;
+}
+.order-section-send-policy{
+    font-size: 20px;
+    color: #7D7D7D;
+}
+.order-section-send-policy .policy-link {
+    text-decoration: underline; /* Underline the link */
+    color: blue; /* Set link color */
+    /* Add any other styles you need */
+}
+footer{
+    margin-top: 25px;
+    background-color: #6d2cc1;
+    padding: 85px;
+}
+
+.m-lr80-1{
+    margin: 0 calc(80px + 1%);
+}
+
+.footer{
+    display: flex;
+    color: white;
+}
+.footer-img-white{
+    width: 100%;
+}
+footer > div{
+    width: 18%;
+    margin: 15px 1%;
+    min-width: 200px;
+
+}
+footer > div > *{
+    margin-bottom: 30px;
+}
+.adress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.adress > img{
+    width: 35px;
+    height: 35px;
+}
+
+.phone-call{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #faf8f8;
+    color: #6D2CC1;
+    font-size: 22px;
+    border: 1px #6D2CC1 solid;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    margin-bottom: 16px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.adress-txt > div{
+    min-width: 200px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .footer-logo{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+    }
+    .footer-img-white{
+        width: 200px;
+        height: 30px;
+    }
+    footer{
+        flex-wrap: wrap;
+    }
+    footer > div{
+        width: 36%;
+        margin: 15px 2%;
+        min-width: 200px;
+
+    }
+    .about-benefits-body{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-benefits-body > *{
+        width: 100%;
+        margin: 30px 30px;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .intro-img{
+        margin-top: 0;
+    }
+    .responsive-nav *{
+        color: #ffffff;
+    }
+    .about-company-body{
+        flex-direction: column;
+    }
+    .fill-6D2CC1{
+        background-color: #6D2CC1;
+    }
+    .responsive-dropbtn{
+        font-size: 16px!important;
+        background-color: #6D2CC1;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+    }
+    .dropbtn{
+        font-size: 16px!important;
+        color: #ffffff!important;
+    }
+    .responsive-nav-under{
+        /*display: block;*/
+        display: flex!important;
+        flex-direction: column;
+    }
+    .about-company-body > *{
+        width: 100%;
+        padding-bottom: 25px;
+    }
+    .wrapper{
+        margin: 0 5%;
+    }
+    .m-lr80{
+        margin: 0 30px;
+    }
+    footer > div{
+        width: 18%;
+        margin: 15px 1%;
+        min-width: 150px;
+
+    }
+    .dropbtn-dropped > a{
+        text-decoration: none;
+        margin-left: -15px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .order-section-description-txt{
+        max-width: 80%;
+    }
+    .order-section-inputs{
+        flex-direction: column;
+    }
+    .order-section-inputs > input {
+        font-size: 16px;
+        max-width: 100%;
+        width: 80%;
+        margin: 15px 0;
+    }
+    .order-section-description-txt{
+
+    }
+    .order-section-submit-info{
+        width: 80%;
+    }
+    .phone-call{
+        min-width: 180px;
+        padding: 0 10px;
+    }
+    .phone-call-section{
+
+    }
+    .order-section-send-btn-group{
+        flex-direction: column;
+    }
+    .order-section-send-btn{
+        margin-bottom: 20px;
+        min-width: 250px;
+        margin-right: 0;
+    }
+    .m-lr80-1{
+        margin: 0 calc(30px + 1%);
+    }
+    footer{
+        padding: 20px;
+    }
+    .products-container{
+        width: 45%;
+        height: 150px;
+        background-image: url("./photos/products/КабелиСиловые.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 2.5%;
+        display: flex;
+        align-items: end;
+        border-radius: 9px;
+    }
+    .responsive-nav-upper{
+        display: flex!important;
+        /*background-color: #ffffff;*/
+    }
+    .desktop-nav{
+        display: none;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .intro-img-divs{
+        margin: 0 30px 30px 30px;
+    }
+    .intro-img{
+        height: 450px;
+    }
+    .intro-img-second-txt{
+        font-size: 24px;
+    }
+    .intro-img-first-txt{
+        font-size: 22px;
+    }
+    .adress-txt > div{
+        min-width: 150px;
+        font-size: 12px;
+    }
+    .responsive-nav-upper {
+        padding: 10px 40px 10px 40px;
+    }
+    .logo{
+        max-width: 150px!important;
+        height: 22px!important;;
+    }
+    .search-res{
+        height: 60px;
+        width: 60px;
+    }
+}
+
+.catalog-drop-down{
+    width: 100%;
+    display: none;
+}
+.catalog-drop:hover .catalog-drop-down{
+    display: block;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.responsive-dropdown-svg{
+    object-fit: contain;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    transition: transform .3s ease-in-out;
+    color: #faf8f8;
+}
+.dropdown-svg{
+    width: 25px;
+    height: 25px;
+    margin-bottom: -5px;
+    transition: transform .3s ease-in-out;
+}
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 22px;
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: black;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    margin-top: 0;
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    left: 20%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.hide{
+    display: none!important;
+}
+.dropbtn:hover .dropdown-svg{
+    transform: rotate(180deg);
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+@media only screen and (max-width: 500px) {
+    .responsive-nav-upper {
+        padding: 10px 20px 0 20px;
+    }
+}
+.products-container > div{
+    width: 80%;
+    align-items: center;
+}
+.product{
+    width: 100%;
+}
+.responsive-nav-under{
+    background-color: #6D2CC1;
+    display: none;
+    margin-bottom: 50px;
+}
+.responsive-nav-under > div {
+    margin: 20px 30px;
+    padding: 0 30px;
+}
+.dropbtn-dropped{
+    display: flex;
+    flex-direction: column;
+}
+.responsive-nav-upper{
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
