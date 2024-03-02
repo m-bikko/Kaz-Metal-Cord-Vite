@@ -1,0 +1,63 @@
+.specification {
+    width: 100%;
+    padding-top: 50px;
+}
+
+.top-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.info-container {
+    width: 49%;
+}
+
+.info-container h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43px;
+}
+
+.info-container p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 30px 0;
+}
+
+.info-container ul li, .info-container ol li {
+    margin-left: 20px;
+}
+.info-container ul, .info-container ol {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .top-container {
+        /*display: block;*/
+        flex-direction: column;
+    }
+    .info-container {
+        width: 100%;
+    }
+
+    .info-container h2 {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+    .info-container p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    .info-container ul, .info-container ol {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+}

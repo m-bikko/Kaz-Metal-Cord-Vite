@@ -1,0 +1,37 @@
+.not-found {
+    width: 100%;
+    background-color: #E8F4FF;
+    padding: 40px 0;
+}
+
+.not-found-container {
+    width: 90%;
+    margin: auto;
+}
+.not-found-container h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43px;
+}
+.not-found-container p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 30px 0;
+}
+
+.input-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-info input {
+    width: 28%;
+    padding: 18px 20px 18px 20px;
+    border-radius: 19px;
+    border: none;
+
+    font-size: 20px;
+    font-weight: 400;
+}

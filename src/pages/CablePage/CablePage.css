@@ -1,0 +1,27 @@
+button {
+    cursor: pointer;
+}
+
+.cable {
+    width: 100%;
+    font-family: Tilda Sans;
+    padding: 40px 0;
+}
+.filter-text {
+    width: 100%;
+    padding: 30px 0 20px;
+}
+
+.filter-cards {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .filter-cards {
+        flex-direction: column;
+    }
+    .filter-text h2 {
+        display: none;
+    }
+}

@@ -1,0 +1,54 @@
+.accordion {
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 10px 0;
+}
+
+.checkbox-item input {
+    width: 20px;
+    height: 20px;
+}
+.checkbox-item label {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.panel {
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .accordion:after {
+        content: url(../Shared/image/AccordionOpen.png);
+    }
+    .accordion.active:after {
+        content: url(../Shared/image/AccordionClose.png);
+    }
+
+    .accordion {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 20px 0;
+    }
+    .accordion.active {
+        color: #B6B6B6;
+    }
+
+    .panel {
+        border-bottom: 1px solid #DDC2FF;
+    }
+}
