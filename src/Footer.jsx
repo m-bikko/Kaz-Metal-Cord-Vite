@@ -1,12 +1,13 @@
 import './App.css'
 import './scripts.js'
-
+import imgLogo from './photos/img_white.png';
+import compass from "./photos/compass.png";
 function Footer(){
     return(
         <>
             <footer className="footer">
                 <div className="footer-logo">
-                    <img className="footer-img-white" src="./photos/img_white.png" alt=""/>
+                    <img className="footer-img-white" src={imgLogo} alt=""/>
                     <div>© 2024 KazMetalCord</div>
                 </div>
                 <div>
@@ -77,7 +78,7 @@ function Footer(){
                         Обратный звонок
                     </div>
                     <div className="adress">
-                        <img src="./photos/compass.png" alt=""/>
+                        <img src={compass} alt=""/>
                         <div className="adress-txt">
                             <div>
                                 г. Алматы, Жибек Жолы 135

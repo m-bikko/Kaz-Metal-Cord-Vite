@@ -1,4 +1,10 @@
 import './App.css'
+import './scripts.js'
+import imgLogo from './photos/img.png';
+import imgSearch from './photos/search.png';
+import imgDropDownWhite from './photos/drop-down-white.png';
+import imgDropDownSvg from './photos/drop-down.svg';
+
 function Nav(){
     return(
         <>
@@ -9,9 +15,8 @@ function Nav(){
                         <div id="bar2" className="bar2"></div>
                         <div id="bar3" className="bar3"></div>
                     </div>
-                    <img id="responsive-nav-upper-logo" className="logo" src="./photos/img.png"
-                         alt="logo"/>
-                    <img id="responsive-nav-upper-search" className="search-res" src="./photos/search.png" alt=""/>
+                    <img id="responsive-nav-upper-logo" className="logo" src={imgLogo} alt="logo"/>
+                    <img id="responsive-nav-upper-search" className="search-res" src={imgSearch} alt=""/>
                 </div>
                 <div id="responsive-nav-under" className="responsive-nav-under hide">
                     <div className="">
@@ -19,8 +24,7 @@ function Nav(){
                     </div>
                     <div className="dropdown">
                         <button className="responsive-dropbtn" onClick="dropContent()">Каталог
-                            <img id="responsive-dropbtn-img" className="responsive-dropdown-svg"
-                                 src="./photos/drop-down-white.png" alt=""/>
+                            <img id="responsive-dropbtn-img" className="responsive-dropdown-svg" src={imgDropDownWhite} alt=""/>
                         </button>
                         <div id="responsive-nav-drop" className="hide dropbtn-dropped">
                             <a href="#">Кабели силовые</a>
@@ -73,7 +77,7 @@ function Nav(){
 
             <nav className="desktop-nav wrapper mt-30">
                 <div className="nav-top">
-                    <img className="logo" src="./photos/img.png" alt="logo"/>
+                    <img className="logo" src={imgLogo} alt="logo"/>
                     <fieldset className="field-container">
                         <input type="text" placeholder="Поиск" className="field"/>
                         <div className="icons-container">
@@ -105,7 +109,7 @@ function Nav(){
                     </div>
                     <div className="dropdown">
                         <div className="hover-underline-animation dropbtn">Каталог
-                            <img className="dropdown-svg" src="./photos/drop-down.svg" alt=""/>
+                            <img className="dropdown-svg" src={imgDropDownSvg} alt=""/>
                             <i className="fa fa-caret-down"></i>
                         </div>
                         <div className="dropdown-content">
