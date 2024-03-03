@@ -17,7 +17,37 @@ button {
     gap: 1.5rem;
 }
 
+.basket-container {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    top: 10%;
+    right: 10px;
+}
+.basket-container button {
+    width: 70px;
+    height: 70px;
+    background-color: #6D2CC1;
+    border-radius: 50%;
+    border: none;
+}
+.basket-container button img {
+    width: 50%;
+    object-fit: contain;
+}
+
 @media only screen and (max-width: 768px) {
+    .basket-container {
+
+    }
+    .basket-container button {
+        width: 50px;
+        height: 50px;
+    }
+
     .filter-cards {
         flex-direction: column;
     }

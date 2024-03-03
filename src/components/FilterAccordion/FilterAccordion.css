@@ -39,16 +39,28 @@
     }
 
     .accordion {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 500;
         line-height: 19px;
         padding: 20px 0;
     }
     .accordion.active {
         color: #B6B6B6;
+        padding: 20px 0 10px;
     }
 
     .panel {
         border-bottom: 1px solid #DDC2FF;
+    }
+
+    .checkbox-item {
+        margin: 5px 0;
+    }
+    .checkbox-item input {
+        width: 18px;
+        height: 18px;
+    }
+    .checkbox-item label {
+        font-size: 16px;
     }
 }

@@ -1,0 +1,54 @@
+.add-file-button {
+    padding: 15px 50px;
+    margin-top: 30px;
+    border: 1px solid #6D2CC1;
+    border-radius: 9px;
+    background-color: #fff;
+    color: #6D2CC1;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    transition: 0.3s all ease;
+}
+
+.add-file-button:hover {
+    background-color: #6D2CC1;
+    color: #fff;
+}
+
+.file-uploader ul {
+    /*display: flex;*/
+    /*gap: 10px;*/
+}
+.file-uploader ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.remove-file-button {
+    border: 1px solid #6D2CC1;
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 5px;
+}
+.remove-file-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 768px) {
+    .add-file-button {
+        padding: 15px 10%;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .file-uploader ul li {
+        font-size: 14px;
+    }
+}
