@@ -747,6 +747,10 @@ footer > div > *{
     footer{
         padding: 20px;
     }
+
+    .footer{
+        width: calc(100% - 40px);
+    }
     .products-container{
         width: 45%;
         height: 150px;
@@ -876,6 +880,13 @@ footer > div > *{
 @media only screen and (max-width: 500px) {
     .responsive-nav-upper {
         padding: 10px 20px 0 20px;
+    }
+    .footer-name-date{
+        font-size: 10px;
+    }
+    .phone-call{
+        min-width: 140px;
+        font-size: 16px;
     }
 }
 .products-container > div{

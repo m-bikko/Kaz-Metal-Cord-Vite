@@ -1,5 +1,13 @@
-import './App.css'
-import './scripts.js'
+import '../../App.css'
+import '../../scripts.js'
+import aboutCompany from "../../photos/about-company.png";
+import aboutBenefitsBodyContainerFirst from "../../photos/about-benefits-body-container-first.png";
+import aboutBenefitsBodyContainerSecond from "../../photos/about-benefits-body-container-second.png";
+import aboutBenefitsBodyContainerThird from "../../photos/about-benefits-body-container-third.png";
+import goTo from "../../photos/goto.png";
+
+
+
 
 function MainPage(){
     return(
@@ -22,7 +30,7 @@ function MainPage(){
                     О компании
                 </div>
                 <div className="about-company-body">
-                    <img className="about-company-image" src="./photos/about-company.png" alt=""/>
+                    <img className="about-company-image" src={aboutCompany} alt={``}/>
                     <div className="about-company-texts">
                         <div className="about-company-text">
                             Всегда в наличии полный ассортимент товаров по оптимальной цене. Опытные специалисты
@@ -46,21 +54,21 @@ function MainPage(){
                             Вся продукция в наличии и под заказ
                         </div>
                         <img className="about-benefits-body-container-img"
-                             src="./photos/about-benefits-body-container-first.png" alt=""/>
+                             src={aboutBenefitsBodyContainerFirst} alt={``}/>
                     </div>
                     <div className="about-benefits-body-container about-benefits-body-container-second">
                         <div className="about-benefits-body-container-text">
                             Круглосуточная доставка в любую точку Казахстана и СНГ
                         </div>
                         <img className="about-benefits-body-container-img"
-                             src="./photos/about-benefits-body-container-second.png" alt=""/>
+                             src={aboutBenefitsBodyContainerSecond} alt={``}/>
                     </div>
                     <div className="about-benefits-body-container about-benefits-body-container-third">
                         <div className="about-benefits-body-container-text">
                             Сертифицированные товарные позиции
                         </div>
                         <img className="about-benefits-body-container-img"
-                             src="./photos/about-benefits-body-container-third.png" alt=""/>
+                             src={aboutBenefitsBodyContainerThird} alt={``}/>
                     </div>
                 </div>
             </div>
@@ -75,7 +83,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src={goTo} className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -86,7 +94,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -96,7 +104,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -106,7 +114,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -116,7 +124,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -126,7 +134,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -136,7 +144,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -146,7 +154,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -156,7 +164,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -166,7 +174,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -176,7 +184,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -186,7 +194,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -196,7 +204,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>
@@ -206,7 +214,7 @@ function MainPage(){
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
-                                <img src="./photos/goto.png" className="goto-img" alt="goto"/>
+                                <img src="../../photos/goto.png" className="goto-img" alt="goto"/>
                             </div>
                         </div>
                     </a>

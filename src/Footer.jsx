@@ -8,7 +8,7 @@ function Footer(){
             <footer className="footer">
                 <div className="footer-logo">
                     <img className="footer-img-white" src={imgLogo} alt=""/>
-                    <div>© 2024 KazMetalCord</div>
+                    <div className="footer-name-date">© 2024 KazMetalCord</div>
                 </div>
                 <div>
                     <div>

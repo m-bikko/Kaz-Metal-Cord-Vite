@@ -1,9 +1,10 @@
 import './App.css'
 import Nav from "./Nav.jsx";
 import './scripts.js'
-// import MainPage from "./MainPage.jsx"
+// import MainPage from "./pages/MainPage/MainPage.jsx"
 import Footer from "./Footer.jsx"
-import CablePage from "./pages/CablePage/CablePage.jsx";
+import DeliveryPage from "./pages/Delivery/DeliveryPage.jsx";
+// import CablePage from "./pages/CablePage/CablePage.jsx";
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
     <>
         <Nav />
         <div className="wrapper">
-            <CablePage/>
+            <DeliveryPage/>
         </div>
         <Footer />
     </>
