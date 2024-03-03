@@ -5,7 +5,7 @@
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(28%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     gap: 1.5rem;
 }
 
@@ -116,7 +116,7 @@
 @media only screen and (max-width: 768px) {
     .card-loader {
         width: 100%;
-        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+        /*grid-template-columns: auto;*/
     }
 
     .card {
@@ -139,6 +139,7 @@
 
     .description, .price {
         font-size: 16px;
+        line-height: 18px;
     }
 
     .download-button button {
