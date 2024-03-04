@@ -749,7 +749,7 @@ footer > div > *{
     }
 
     .footer{
-        width: calc(100% - 40px);
+        width: 100%;
     }
     .products-container{
         width: 45%;
