@@ -1,40 +1,42 @@
-import React, {useState, useEffect} from 'react';
-import './FilterAccordion.css'
+// FilterAccordion.jsx
+import React, { useState, useEffect } from 'react';
+import './FilterAccordion.css';
 
-const FilterAccordion = ({type, checkbox}) => {
+const FilterAccordion = ({ type, checkbox, onFilterChange }) => {
     const isMobile = window.innerWidth <= 768;
     const [isActive, setIsActive] = useState(!isMobile);
-    const [panelHeight, setPanelHeight] = useState(isMobile ? '0' : `${checkbox.length * 40}px`);
-    const [selected, setSelected] = useState([])
+    const [panelHeight, setPanelHeight] = useState(isMobile ? '0' : `${checkbox[type].length * 40}px`);
+    const [selected, setSelected] = useState([]);
 
     const toggleAccordion = () => {
-        if(isMobile) {
-            setIsActive(!isActive)
-            setPanelHeight(isActive ? '0' : `${checkbox.length * 40}px`)
+        if (isMobile) {
+            setIsActive(!isActive);
+            setPanelHeight(isActive ? '0' : `${checkbox[type].length * 40}px`);
         }
-    }
+    };
 
     const handleChange = (e, idx) => {
         const activeData = document.getElementById(idx).checked;
 
-        if(activeData === true) {
-            setSelected(oldData => [...oldData, e.target.value]);
+        if (activeData === true) {
+            setSelected((oldData) => [...oldData, e.target.value]);
+            onFilterChange(type, [...selected, e.target.value]);
         }
-    }
+    };
 
     useEffect(() => {
         const handleResize = () => {
             const newIsMobile = window.innerWidth <= 768;
             setIsActive(!newIsMobile);
-            setPanelHeight(newIsMobile ? '0' : `${checkbox.length * 40}px`);
-        }
+            setPanelHeight(newIsMobile ? '0' : `${checkbox[type].length * 40}px`);
+        };
 
         window.addEventListener('resize', handleResize);
 
-        return ( () => {
+        return () => {
             window.removeEventListener('resize', handleResize);
-        })
-    }, []);
+        };
+    }, [checkbox, type]);
 
     return (
         <div>
@@ -42,16 +44,15 @@ const FilterAccordion = ({type, checkbox}) => {
                 {type}
             </button>
             <div className={`panel`} style={{ maxHeight: panelHeight }}>
-                {checkbox.map((item, idx) => (
+                {checkbox[type].map((item, idx) => (
                     <div key={idx} className={`checkbox-item`}>
-                        <input id={idx} type={`checkbox`} value={item.type} onChange={(e) => handleChange(e, idx)} />
-                        <label htmlFor={idx}>{item.type}</label>
+                        <input id={idx} type={`checkbox`} value={item} onChange={(e) => handleChange(e, idx)} />
+                        <label htmlFor={idx}>{item}</label>
                     </div>
                 ))}
             </div>
         </div>
     );
 };
-
 
 export default FilterAccordion;

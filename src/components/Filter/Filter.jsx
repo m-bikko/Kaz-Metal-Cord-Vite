@@ -5,6 +5,7 @@ import { countStills } from '../Shared/CountOfStill.js'
 import { marks } from '../Shared/Mark.js'
 import { sizeBrushes } from "../Shared/SizeOfBrush.js";
 import FilterAccordion from '../FilterAccordion/FilterAccordion.jsx'
+import filterData from '../Shared/kabeli-silovye-filter.json'
 
 function Filter() {
     const [isActive, setIsActive] = useState(false);
@@ -12,6 +13,8 @@ function Filter() {
     const handleIsActive = () => {
         setIsActive(!isActive);
     }
+    // const [selectedFilters, setSelectedFilters] = useState({});
+
 
     return (
         <div className={`filter`}>
@@ -30,12 +33,22 @@ function Filter() {
                 <span>Фильтры</span>
             </button>
             <div className={`filter-container ${isActive ? 'active' : ''}`}>
-
-                <FilterAccordion type={`Количество скруток`} checkbox={countTwists}/>
-                <FilterAccordion type={`Количество жил`} checkbox={countStills}/>
-                <FilterAccordion type={`Марка`} checkbox={marks}/>
-                <FilterAccordion type={`Размер сечения, мм2`} checkbox={sizeBrushes}/>
-
+                <FilterAccordion
+                    type={`Количество скруток`}
+                    checkbox={filterData}
+                />
+                <FilterAccordion
+                    type={`Количество жил`}
+                    checkbox={filterData}
+                />
+                <FilterAccordion
+                    type={`Марка`}
+                    checkbox={filterData}
+                />
+                <FilterAccordion
+                    type={`Размер сечения, мм2`}
+                    checkbox={filterData}
+                />
             </div>
         </div>
     )
