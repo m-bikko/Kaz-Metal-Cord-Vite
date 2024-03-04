@@ -6,14 +6,15 @@ import './scripts.js';
 // import DeliveryPage from "./pages/Delivery/DeliveryPage.jsx";
 // import CablePage from "./pages/CablePage/CablePage.jsx";
 // import HowToBuyPage from "./pages/HowToBuyPage/HowToBuyPage.jsx";
-import Contacts from "./pages/Contacts/Contacts.jsx";
+// import Contacts from "./pages/Contacts/Contacts.jsx";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage/PrivacyPolicyPage.jsx";
 function App() {
 
   return (
     <>
         <Nav />
         <div className="wrapper">
-            <Contacts/>
+            <PrivacyPolicyPage/>
         </div>
         <Footer />
     </>

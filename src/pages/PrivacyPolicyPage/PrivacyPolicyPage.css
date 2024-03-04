@@ -1,0 +1,56 @@
+
+
+.privacy-policy-title{
+    font-family: Tilda Sans;
+    font-size: 36px!important;
+    font-weight: 600!important;
+    line-height: 43px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    margin: 40px 0;
+}
+.privacy-policy-full > div{
+    margin-bottom: 10px;
+}
+.privacy-policy-full > div > span{
+    margin-bottom: 10px;
+}
+.privacy-policy-full *{
+    font-family: Tilda Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    text-align: left;
+
+}
+.privacy-policy-full > div > span{
+    margin: 10px 0 10px 0;
+}
+ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ul{
+    padding: 0 0 0 20px;
+}
+@media only screen and(max-width: 768px){
+    .privacy-policy-title{
+        font-family: Tilda Sans;
+        font-size: 22px!important;
+        font-weight: 600!important;
+        line-height: 26px;
+        letter-spacing: -0.03em;
+        text-align: left;
+
+    }
+    .privacy-policy-full *{
+        font-family: Tilda Sans;
+        font-size: 16px!important;
+        font-weight: 400!important;
+        line-height: 19px!important;
+        letter-spacing: -0.03em;
+        text-align: left;
+
+    }
+}
