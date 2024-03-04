@@ -22,6 +22,7 @@
     height: fit-content;
     margin-bottom: 25px;
 }
+
 @media only screen and (max-width: 768px) {
     .delivery-title{
         font-family: Tilda Sans;
