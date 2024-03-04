@@ -1,0 +1,81 @@
+.contacts-full{
+    margin-top: 70px;
+}
+.contacts-full > div{
+    margin: 10px 0;
+}
+.contacts-title{
+    font-family: Tilda Sans;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43px;
+    letter-spacing: -0.03em;
+    text-align: left;
+}
+.telephone-email{
+    display: flex;
+    flex-direction: column;
+}
+.telephone-email > div{
+    display: flex;
+}
+.telephone-email *{
+    font-family: Tilda Sans;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.03em;
+    text-align: left;
+}
+.telephone-email > div > div{
+    color: #6D2CC1;
+}
+.contacts-adress *{
+    font-family: Tilda Sans;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: -0.03em;
+}
+
+@media only screen and (max-width: 768px) {
+    .contacts-full{
+        margin-top: 15px;
+    }
+    .contacts-title{
+        font-family: Tilda Sans;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 26px;
+        letter-spacing: -0.03em;
+        text-align: left;
+    }
+    .telephone-email{
+        display: flex;
+        flex-direction: column;
+    }
+    .telephone-email > div{
+        display: flex;
+    }
+    .telephone-email *{
+        font-family: Tilda Sans;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: -0.03em;
+        text-align: left;
+
+    }
+    .telephone-email > div > div{
+        color: #6D2CC1;
+    }
+    .contacts-adress *{
+        font-family: Tilda Sans;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: -0.03em;
+        text-align: left;
+
+    }
+}

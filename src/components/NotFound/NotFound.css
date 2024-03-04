@@ -3,13 +3,14 @@
     background-color: #E8F4FF;
     padding: 40px 0;
     margin-top: 15px;
+    border-radius: 8px;
 }
 
 .not-found-container {
     width: 90%;
     margin: auto;
 }
-.not-found-container h2 {
+.not-found-container span {
     font-size: 36px;
     font-weight: 600;
     line-height: 43px;
@@ -82,8 +83,9 @@
     .not-found {
         padding: 15px 0;
     }
-    .not-found-container h2 {
-        font-size: 22px;
+    .not-found-container span {
+        font-size: 24px;
+        font-weight: 600!important;
     }
     .not-found-container p {
         font-size: 16px;

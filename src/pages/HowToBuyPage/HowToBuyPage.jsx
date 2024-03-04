@@ -1,6 +1,7 @@
 import "./HowToBuyPage.css";
 import { useState } from "react";
 import FAQ from "./FAQ.jsx";
+import NotFound from "../../components/NotFound/NotFound.jsx";
 
 function HowToBuyPage(){
     const [faqs, setFaqs] = useState([
@@ -42,28 +43,34 @@ function HowToBuyPage(){
     };
 
     return (
-        <div className="HowToBuyPage-full">
-            <div className="how-to-buy">
-                <div className="how-to-buy-title">
-                    Как оформить заказ и оплатить покупку?
+        <div>
+            <div className="HowToBuyPage-full">
+                <div className="how-to-buy">
+                    <div className="how-to-buy-title">
+                        Как оформить заказ и оплатить покупку?
+                    </div>
+                    <div className="how-to-buy-description">
+                        Отгрузка товара осуществляется после полной предоплаты. Для государственных предприятий
+                        Республики Казахстан возможна отсрочка платежа (за дополнительной информацией обращайтесь к
+                        менеджеру).
+                    </div>
                 </div>
-                <div className="how-to-buy-description">
-                    Отгрузка товара осуществляется после полной предоплаты. Для государственных предприятий Республики Казахстан возможна отсрочка платежа (за дополнительной информацией обращайтесь к менеджеру).
-                </div>
-            </div>
-            <div className="FAQ">
-                <div className="FAQ-title">
-                    FAQ: Часто задаваемые вопросы
-                </div>
-                <div className="FAQ-description">
-                    <div className="faqs">
-                        {faqs.map((faq, index) => (
-                            <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ}/>
-                        ))}
+                <div className="FAQ">
+                    <div className="FAQ-title">
+                        FAQ: Часто задаваемые вопросы
+                    </div>
+                    <div className="FAQ-description">
+                        <div className="faqs">
+                            {faqs.map((faq, index) => (
+                                <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ}/>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
+            <NotFound/>
         </div>
+
 
         // <div className="App">
         //     <div className="faqs">

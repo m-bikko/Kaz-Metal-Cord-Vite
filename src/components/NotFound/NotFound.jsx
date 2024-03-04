@@ -11,7 +11,7 @@ function NotFound() {
     return (
         <div className={`not-found`}>
             <div className={`not-found-container`}>
-                <h2>Не нашли, что искали?</h2>
+                <span>Не нашли, что искали?</span>
                 <p>Оставьте свои контактные данные. Наши менеджеры на связи по будням с 9:00 до 18:00, время ответа - до 30 минут.</p>
                 <div className={`input-info`}>
                     <input placeholder="Ваше имя"/>
