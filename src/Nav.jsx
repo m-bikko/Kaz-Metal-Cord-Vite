@@ -1,5 +1,6 @@
 import './App.css'
 import './scripts.js'
+import { Link } from "react-router-dom";
 import imgLogo from './photos/img.png';
 import imgSearch from './photos/search.png';
 import imgDropDownWhite from './photos/drop-down-white.png';
@@ -27,22 +28,22 @@ function Nav(){
                             <img id="responsive-dropbtn-img" className="responsive-dropdown-svg" src={imgDropDownWhite} alt=""/>
                         </button>
                         <div id="responsive-nav-drop" className="hide dropbtn-dropped">
-                            <a href="#">Кабели силовые</a>
-                            <a href="#">Кабели контрольные</a>
-                            <a href="#">Кабели монтажные</a>
-                            <a href="#">Кабели передачи данных</a>
-                            <a href="#">Радиочастотные коаксиальные кабели</a>
-                            <a href="#">Провода установочные (монтажные)</a>
-                            <a href="#">Провода обмоточные</a>
-                            <a href="#">Соединительные провода</a>
-                            <a href="#">Провода водопогружные</a>
-                            <a href="#">Провода силовые</a>
-                            <a href="#">Провода воздушных линий электропередач</a>
-                            <a href="#">Провода бытовые</a>
-                            <a href="#">Провода бортовые авиационные</a>
-                            <a href="#">Трансформаторы</a>
-                            <a href="#">Освещение</a>
-                            <a href="#">Гофра</a>
+                            <Link to="#">Кабели силовые</Link>
+                            <Link to="#">Кабели контрольные</Link>
+                            <Link to="#">Кабели монтажные</Link>
+                            <Link to="#">Кабели передачи данных</Link>
+                            <Link to="#">Радиочастотные коаксиальные кабели</Link>
+                            <Link to="#">Провода установочные (монтажные)</Link>
+                            <Link to="#">Провода обмоточные</Link>
+                            <Link to="#">Соединительные провода</Link>
+                            <Link to="#">Провода водопогружные</Link>
+                            <Link to="#">Провода силовые</Link>
+                            <Link to="#">Провода воздушных линий электропередач</Link>
+                            <Link to="#">Провода бытовые</Link>
+                            <Link to="#">Провода бортовые авиационные</Link>
+                            <Link to="#">Трансформаторы</Link>
+                            <Link to="#">Освещение</Link>
+                            <Link to="#">Гофра</Link>
                         </div>
                     </div>
                     <div className="">
@@ -113,22 +114,22 @@ function Nav(){
                             <i className="fa fa-caret-down"></i>
                         </div>
                         <div className="dropdown-content">
-                            <a href="#">Кабели силовые</a>
-                            <a href="#">Кабели контрольные</a>
-                            <a href="#">Кабели монтажные</a>
-                            <a href="#">Кабели передачи данных</a>
-                            <a href="#">Радиочастотные коаксиальные кабели</a>
-                            <a href="#">Провода установочные (монтажные)</a>
-                            <a href="#">Провода обмоточные</a>
-                            <a href="#">Соединительные провода</a>
-                            <a href="#">Провода водопогружные</a>
-                            <a href="#">Провода силовые</a>
-                            <a href="#">Провода воздушных линий электропередач</a>
-                            <a href="#">Провода бытовые</a>
-                            <a href="#">Провода бортовые авиационные</a>
-                            <a href="#">Трансформаторы</a>
-                            <a href="#">Освещение</a>
-                            <a href="#">Гофра</a>
+                            <Link to="#">Кабели силовые</Link>
+                            <Link to="#">Кабели контрольные</Link>
+                            <Link to="#">Кабели монтажные</Link>
+                            <Link to="#">Кабели передачи данных</Link>
+                            <Link to="#">Радиочастотные коаксиальные кабели</Link>
+                            <Link to="#">Провода установочные (монтажные)</Link>
+                            <Link to="#">Провода обмоточные</Link>
+                            <Link to="#">Соединительные провода</Link>
+                            <Link to="#">Провода водопогружные</Link>
+                            <Link to="#">Провода силовые</Link>
+                            <Link to="#">Провода воздушных линий электропередач</Link>
+                            <Link to="#">Провода бытовые</Link>
+                            <Link to="#">Провода бортовые авиационные</Link>
+                            <Link to="#">Трансформаторы</Link>
+                            <Link to="#">Освещение</Link>
+                            <Link to="#">Гофра</Link>
                         </div>
                     </div>
                     <div className="hover-underline-animation">

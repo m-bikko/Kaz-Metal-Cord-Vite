@@ -3,32 +3,39 @@ import React, { useState, useEffect } from 'react';
 import './FilterAccordion.css';
 
 const FilterAccordion = ({ type, checkbox, onFilterChange }) => {
-    const isMobile = window.innerWidth <= 768;
-    const [isActive, setIsActive] = useState(!isMobile);
-    const [panelHeight, setPanelHeight] = useState(isMobile ? '0' : `${checkbox[type].length * 40}px`);
+    const [isActive, setIsActive] = useState(window.innerWidth > 768);
+    const [isFullHeight, setIsFullHeight] = useState(false);
     const [selected, setSelected] = useState([]);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [panelHeight, setPanelHeight] = useState(`${checkbox[type].length * 40}px`);
 
     const toggleAccordion = () => {
-        if (isMobile) {
-            setIsActive(!isActive);
-            setPanelHeight(isActive ? '0' : `${checkbox[type].length * 40}px`);
-        }
+        setIsActive(!isActive);
     };
 
-    const handleChange = (e, idx) => {
-        const activeData = document.getElementById(idx).checked;
+    const handleChange = (e) => {
+        const { value, checked } = e.target;
 
-        if (activeData === true) {
-            setSelected((oldData) => [...oldData, e.target.value]);
-            onFilterChange(type, [...selected, e.target.value]);
+        if (checked) {
+            setSelected((oldData) => [...oldData, value]);
+        } else {
+            setSelected((oldData) => oldData.filter((item) => item !== value));
         }
+
+        onFilterChange(type, [...selected, value]);
     };
 
     useEffect(() => {
         const handleResize = () => {
             const newIsMobile = window.innerWidth <= 768;
-            setIsActive(!newIsMobile);
-            setPanelHeight(newIsMobile ? '0' : `${checkbox[type].length * 40}px`);
+            setIsMobile(newIsMobile);
+
+            if (newIsMobile) {
+                setIsActive(false);
+            } else {
+                setIsActive(true);
+                setPanelHeight(`${checkbox[type].length * 40}px`);
+            }
         };
 
         window.addEventListener('resize', handleResize);
@@ -38,15 +45,31 @@ const FilterAccordion = ({ type, checkbox, onFilterChange }) => {
         };
     }, [checkbox, type]);
 
+    useEffect(() => {
+        const newPanelHeight = isFullHeight
+            ? '100%'
+            : isActive
+                ? `${checkbox[type].length * 40}px`
+                : '0';
+
+        setPanelHeight(newPanelHeight);
+    }, [checkbox, type, selected, isFullHeight, isActive]);
+
     return (
         <div>
             <button className={`accordion ${isActive ? 'active' : ''}`} onClick={toggleAccordion}>
                 {type}
             </button>
-            <div className={`panel`} style={{ maxHeight: panelHeight }}>
+            <div className={`panel`} style={{ maxHeight: panelHeight, overflow: 'auto' }}>
                 {checkbox[type].map((item, idx) => (
                     <div key={idx} className={`checkbox-item`}>
-                        <input id={idx} type={`checkbox`} value={item} onChange={(e) => handleChange(e, idx)} />
+                        <input
+                            id={idx}
+                            type={`checkbox`}
+                            value={item}
+                            checked={selected.includes(item)}
+                            onChange={handleChange}
+                        />
                         <label htmlFor={idx}>{item}</label>
                     </div>
                 ))}

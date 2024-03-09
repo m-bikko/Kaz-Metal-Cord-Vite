@@ -20,6 +20,21 @@
     font-weight: 500;
 }
 
+.cable-page-clicker {
+    display: flex;
+    align-items: center;
+}
+.cable-page-clicker button {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #7D7D7D;
+    border-radius: 50%;
+    background-color: inherit;
+}
+.cable-page-clicker p {
+    margin: 0 5px;
+}
+
 @media only screen and (max-width: 768px) {
     .clicker {
         width: 100%;
@@ -28,5 +43,10 @@
 
     .clicker button, .clicker p {
         font-size: 14px;
+    }
+
+
+    .cable-page-clicker {
+        width: 30%;
     }
 }

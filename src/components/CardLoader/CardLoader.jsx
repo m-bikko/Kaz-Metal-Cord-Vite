@@ -15,7 +15,7 @@ function CardLoader() {
         <div className={`card-loader`}>
             <div className={`card-container`}>
                 {cardData.slice(0, visibleItems).map((item, idx) => (
-                    <Card key={idx} image={cable} description={item.category} price={item.price} productId={1} />
+                    <Card key={idx} image={cable} description={item.category} price={item.price} productId={idx} />
                 ))}
             </div>
             <div className={`download-button`}>

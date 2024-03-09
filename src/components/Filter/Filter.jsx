@@ -9,12 +9,21 @@ import filterData from '../Shared/kabeli-silovye-filter.json'
 
 function Filter() {
     const [isActive, setIsActive] = useState(false);
+    const [selectedFilters, setSelectedFilters] = useState({});
 
     const handleIsActive = () => {
         setIsActive(!isActive);
     }
     // const [selectedFilters, setSelectedFilters] = useState({});
 
+    const handleFilterChange = (type, values) => {
+        setSelectedFilters((prevFilters) => ({
+            ...prevFilters,
+            [type]: values,
+        }));
+        console.log(selectedFilters)
+        // onFilterChange(selectedFilters);
+    };
 
     return (
         <div className={`filter`}>
@@ -36,18 +45,22 @@ function Filter() {
                 <FilterAccordion
                     type={`Количество скруток`}
                     checkbox={filterData}
+                    // onFilterChange={handleFilterChange}
                 />
                 <FilterAccordion
                     type={`Количество жил`}
                     checkbox={filterData}
+                    // onFilterChange={handleFilterChange}
                 />
                 <FilterAccordion
                     type={`Марка`}
                     checkbox={filterData}
+                    // onFilterChange={handleFilterChange}
                 />
                 <FilterAccordion
                     type={`Размер сечения, мм2`}
                     checkbox={filterData}
+                    // onFilterChange={handleFilterChange}
                 />
             </div>
         </div>

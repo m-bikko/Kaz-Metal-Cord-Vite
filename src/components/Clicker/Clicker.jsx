@@ -1,22 +1,25 @@
 import React, {useState} from "react";
 import './Clicker.css';
 
-function Clicker() {
-    const [count, setCount] = useState(0);
+const Clicker = ({quantity = 1, setCountQuantity, useCablePageStyles}) => {
+    const [count, setCount] = useState(quantity);
 
     const handleIncrement = () => {
         setCount(count + 1);
+        setCountQuantity(count + 1)
     };
 
     const handleDecrement = () => {
-        if(count > 0) {
+        if(count > 1) {
             setCount(count - 1);
+            setCountQuantity(count - 1)
         }
     };
 
+    const clickerClassName = useCablePageStyles ? 'cable-page-clicker' : 'clicker';
 
     return (
-        <div className={`clicker`}>
+        <div className={clickerClassName}>
             <button onClick={handleDecrement}>-</button>
             <p>{count}</p>
             <button onClick={handleIncrement}>+</button>

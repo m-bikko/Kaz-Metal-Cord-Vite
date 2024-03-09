@@ -4,7 +4,6 @@ button {
 
 .cable {
     width: 100%;
-    font-family: Tilda Sans;
     padding: 40px 0;
 }
 .filter-text {
@@ -27,6 +26,9 @@ button {
     top: 10%;
     right: 10px;
 }
+.basket-container.active{
+    display: none;
+}
 .basket-container button {
     width: 70px;
     height: 70px;
@@ -37,6 +39,60 @@ button {
 .basket-container button img {
     width: 50%;
     object-fit: contain;
+}
+
+
+.basket-card-container {
+    min-height: 100px;
+    padding: 30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 30px 0;
+}
+.basket-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+}
+.basket-card>img {
+    width: 20%;
+    object-fit: contain;
+}
+
+.basket-card-detail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.basket-card-description {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+}
+.basket-card-price {
+    width: 100%;
+}
+.basket-card-price>p {
+    color: #6D2CC1;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 20px;
+}
+
+.remove-card {
+    width: 10%;
+    border: none;
+    background-color: inherit;
+}
+
+.basket-total {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -53,5 +109,18 @@ button {
     }
     .filter-text h2 {
         display: none;
+    }
+
+
+    .basket-card-description {
+    }
+    .basket-card-price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .basket-card-price>p {
+        margin-top: 0;
+        font-size: 16px;
     }
 }

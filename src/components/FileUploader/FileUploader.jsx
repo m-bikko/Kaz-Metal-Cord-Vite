@@ -1,26 +1,33 @@
 import React, { useRef, useState } from 'react';
-import './FileUploader.css'
-import remove from '../Shared/image/remove.png'
+import './FileUploader.css';
+import removeIcon from '../Shared/image/remove.png';
 
-function FileUploader() {
+const FileUploader = ({ updateSelectedFiles }) => {
     const fileInputRef = useRef(null);
     const [selectedFiles, setSelectedFiles] = useState([]);
+    const maxFileCount = 10;
 
     const handleFileChange = () => {
         const files = fileInputRef.current.files;
         const filesArray = Array.from(files);
-        if(selectedFiles.length < 10){
+
+        if (selectedFiles.length + filesArray.length <= maxFileCount) {
             setSelectedFiles((prevFiles) => [...prevFiles, ...filesArray]);
+            updateSelectedFiles([...selectedFiles, ...filesArray]); // Обновляем выбранные файлы в родительском компоненте
+        } else {
+            // Добавьте здесь обработку случая, когда выбрано слишком много файлов
+            console.error('Выбрано слишком много файлов');
         }
     };
 
     const removeFile = (file) => {
         const updatedFiles = selectedFiles.filter((f) => f !== file);
         setSelectedFiles(updatedFiles);
+        updateSelectedFiles(updatedFiles); // Обновляем выбранные файлы в родительском компоненте
     };
 
     return (
-        <div className={`file-uploader`}>
+        <div className="file-uploader">
             <input
                 type="file"
                 accept=".pdf, .doc, .docx, .txt"
@@ -29,19 +36,22 @@ function FileUploader() {
                 ref={fileInputRef}
                 style={{ display: 'none' }}
             />
-            <button className={`add-file-button`} onClick={() => fileInputRef.current.click()}>Прикрепить файлы</button>
+            <button className="add-file-button" onClick={() => fileInputRef.current.click()}>
+                Прикрепить файлы
+            </button>
 
             <ul>
                 {selectedFiles.map((file, index) => (
                     <li key={index}>
-                        {/*https://cdn-icons-png.flaticon.com/512/3405/3405244.png*/}
-                        <button className={`remove-file-button`} onClick={() => removeFile(file)}><img alt={``} src={remove}/></button>
+                        <button className="remove-file-button" onClick={() => removeFile(file)}>
+                            <img alt="" src={removeIcon} />
+                        </button>
                         {' '}{file.name}
                     </li>
                 ))}
             </ul>
         </div>
     );
-}
+};
 
 export default FileUploader;

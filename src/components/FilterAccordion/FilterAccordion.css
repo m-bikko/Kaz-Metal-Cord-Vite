@@ -7,6 +7,7 @@
     line-height: 22px;
     display: flex;
     justify-content: space-between;
+    margin: 20px 0 10px;
 }
 .checkbox-item {
     display: flex;
@@ -26,8 +27,15 @@
 }
 
 .panel {
-    overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+}
+
+
+.toggle-height-button {
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: inherit;
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -62,5 +70,9 @@
     }
     .checkbox-item label {
         font-size: 16px;
+    }
+
+    .toggle-height-button {
+        display: none;
     }
 }

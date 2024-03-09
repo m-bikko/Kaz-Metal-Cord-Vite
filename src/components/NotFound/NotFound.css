@@ -1,7 +1,7 @@
 .not-found {
     width: 100%;
     background-color: #E8F4FF;
-    padding: 40px 0;
+    padding: 60px 0;
     margin-top: 15px;
     border-radius: 8px;
 }
@@ -10,12 +10,12 @@
     width: 90%;
     margin: auto;
 }
-.not-found-container span {
+.not-found-container h2 {
     font-size: 36px;
     font-weight: 600;
     line-height: 43px;
 }
-.not-found-container p {
+.not-found-hint {
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
@@ -51,6 +51,7 @@
     /*height: 56px;*/
     display: flex;
     align-items: center;
+    margin-top: 30px;
     gap: 5%;
 }
 .send-button{
@@ -76,6 +77,53 @@
     border-bottom: 1px solid #7D7D7D;
 }
 .send-request-container p a:active {
+    color: inherit;
+}
+
+/*For Basket*/
+
+.not-found-basket {
+    width: 100%;
+    background-color: inherit;
+}
+
+
+.input-info-basket {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.input-info-basket input {
+    width: 95%;
+    border-radius: 19px;
+    border: 1px solid #BABABA;
+    font-weight: 400;
+    padding: 18px 0 18px 5%;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+
+.send-request-container-basket {
+    margin-top: 30px;
+}
+.send-request-container-basket button {
+    width: 100%;
+}
+.send-request-container-basket  p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 10px;
+    color: #7D7D7D;
+}
+.send-request-container-basket  p a {
+    color: #7D7D7D;
+    text-decoration: none;
+    border-bottom: 1px solid #7D7D7D;
+}
+.send-request-container-basket  p a:active {
     color: inherit;
 }
 

@@ -1,29 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 import './Card.css'
 import cable from "../Shared/image/cable.png";
 import Clicker from "../Clicker/Clicker.jsx";
 
 const Card = ({ productId, image, description, price }) => {
+    const [countQuantity, setCountQuantity] = useState(1)
     const handleBuyClick = () => {
-        const storedData = JSON.parse(localStorage.getItem('cart')) || [];
+        const storedData = JSON.parse(localStorage.getItem('storedCard')) || [];
 
         const existingCard = storedData.find(item => item.productId === productId);
 
         if (existingCard) {
 
-            existingCard.quantity += 1;
+            existingCard.quantity += countQuantity;
         } else {
             storedData.push({
                 productId,
                 image,
                 description,
                 price,
-                quantity: 1,
+                quantity: countQuantity,
             });
         }
 
-        // Сохраняем обновленные данные в localStorage
-        localStorage.setItem('cart', JSON.stringify(storedData));
+        localStorage.setItem('storedCard', JSON.stringify(storedData));
     };
 
     return (
@@ -34,7 +34,7 @@ const Card = ({ productId, image, description, price }) => {
                 <p className={`price`}>от {price} тг.</p>
                 <button className={`detail`}>Подробнее</button>
                 <div className={`button-container`}>
-                    <Clicker />
+                    <Clicker setCountQuantity={setCountQuantity}/>
                     <button className={`buy`} onClick={handleBuyClick}>
                         Купить
                     </button>
