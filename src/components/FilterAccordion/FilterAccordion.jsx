@@ -1,4 +1,3 @@
-// FilterAccordion.jsx
 import React, { useState, useEffect } from 'react';
 import './FilterAccordion.css';
 
@@ -14,6 +13,7 @@ const FilterAccordion = ({ type, checkbox, onFilterChange }) => {
     };
 
     const handleChange = (e) => {
+        console.log(e.target)
         const { value, checked } = e.target;
 
         if (checked) {

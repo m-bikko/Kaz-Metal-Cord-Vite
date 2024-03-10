@@ -10,7 +10,6 @@ function CardLoader() {
     const handleLoadMore = () => {
         setVisibleItems(prevVisibleItems => prevVisibleItems + 6);
     };
-
     return (
         <div className={`card-loader`}>
             <div className={`card-container`}>

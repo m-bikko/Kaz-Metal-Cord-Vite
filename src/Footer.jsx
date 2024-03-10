@@ -2,6 +2,8 @@ import './App.css'
 import './scripts.js'
 import imgLogo from './photos/img_white.png';
 import compass from "./photos/compass.png";
+// import {a} from "react-router-dom";
+
 function Footer(){
     return(
         <>
@@ -12,19 +14,19 @@ function Footer(){
                 </div>
                 <div>
                     <div>
-                        Главная
+                        <a className={`footer-link`} href={''}>Главная</a>
                     </div>
                     <div>
                         Каталог
                     </div>
                     <div>
-                        Условия доставки
+                        <a className={`footer-link`} href={'dostavka'}>Условия доставки</a>
                     </div>
                     <div>
-                        Как купить
+                        <a className={`footer-link`} href={'kak-kupit'}>Как купить</a>
                     </div>
                     <div>
-                        Контакты
+                        <a className={`footer-link`} href={'contacts'}>Контакты</a>
                     </div>
                     <div>
                         Провода силовые
@@ -35,7 +37,7 @@ function Footer(){
                 </div>
                 <div>
                     <div>
-                        Кабели силовые
+                        <a className={`footer-link`} href={'kabeli-silovye'}>Кабели силовые</a>
                     </div>
                     <div>
                         Кабели контрольные

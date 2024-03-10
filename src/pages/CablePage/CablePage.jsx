@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import './CablePage.css'
+import {Link} from "react-router-dom";
 import CableHints from "../../components/CableHints/CableHints.jsx";
 import Filter from "../../components/Filter/Filter.jsx";
 import CardLoader from "../../components/CardLoader/CardLoader.jsx";

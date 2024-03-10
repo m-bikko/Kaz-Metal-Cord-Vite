@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import './Filter.css'
-import { countTwists } from '../Shared/CountOfTwist.js'
-import { countStills } from '../Shared/CountOfStill.js'
-import { marks } from '../Shared/Mark.js'
-import { sizeBrushes } from "../Shared/SizeOfBrush.js";
 import FilterAccordion from '../FilterAccordion/FilterAccordion.jsx'
 import filterData from '../Shared/kabeli-silovye-filter.json'
 

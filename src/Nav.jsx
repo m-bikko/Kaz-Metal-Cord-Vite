@@ -28,7 +28,7 @@ function Nav(){
                             <img id="responsive-dropbtn-img" className="responsive-dropdown-svg" src={imgDropDownWhite} alt=""/>
                         </button>
                         <div id="responsive-nav-drop" className="hide dropbtn-dropped">
-                            <Link to="#">Кабели силовые</Link>
+                            <Link to="kabeli-silovye">Кабели силовые</Link>
                             <Link to="#">Кабели контрольные</Link>
                             <Link to="#">Кабели монтажные</Link>
                             <Link to="#">Кабели передачи данных</Link>
@@ -78,7 +78,7 @@ function Nav(){
 
             <nav className="desktop-nav wrapper mt-30">
                 <div className="nav-top">
-                    <img className="logo" src={imgLogo} alt="logo"/>
+                    <Link to={``}><img className="logo" src={imgLogo} alt="logo"/></Link>
                     <fieldset className="field-container">
                         <input type="text" placeholder="Поиск" className="field"/>
                         <div className="icons-container">
@@ -106,7 +106,7 @@ function Nav(){
                 </div>
                 <div className="nav-bottom">
                     <div className="hover-underline-animation">
-                        Главная
+                        <Link className={`nav-link`} to={``}>Главная</Link>
                     </div>
                     <div className="dropdown">
                         <div className="hover-underline-animation dropbtn">Каталог
@@ -114,7 +114,7 @@ function Nav(){
                             <i className="fa fa-caret-down"></i>
                         </div>
                         <div className="dropdown-content">
-                            <Link to="#">Кабели силовые</Link>
+                            <Link to="kabeli-silovye">Кабели силовые</Link>
                             <Link to="#">Кабели контрольные</Link>
                             <Link to="#">Кабели монтажные</Link>
                             <Link to="#">Кабели передачи данных</Link>
@@ -133,13 +133,13 @@ function Nav(){
                         </div>
                     </div>
                     <div className="hover-underline-animation">
-                        Условия доставки
+                        <Link className={`nav-link`} to={`dostavka`}>Условия доставки</Link>
                     </div>
                     <div className="hover-underline-animation">
-                        Как купить
+                        <Link className={`nav-link`} to={`kak-kupit`}>Как купить</Link>
                     </div>
                     <div className="hover-underline-animation">
-                        Контакты
+                        <Link className={`nav-link`} to={`contacts`}>Контакты</Link>
                     </div>
                 </div>
             </nav>

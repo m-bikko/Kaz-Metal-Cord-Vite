@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import './NotFound.css';
+import {Link} from "react-router-dom";
 import InputMask from 'react-input-mask';
 import emailjs from '@emailjs/browser';
 import FileUploader from "../FileUploader/FileUploader.jsx";
-
 
 const NotFound = ({useBasketStyles}) => {
     const handleInput = (e) =>{
@@ -16,27 +16,9 @@ const NotFound = ({useBasketStyles}) => {
     const sendContainerStyle = useBasketStyles ? 'send-request-container-basket' : 'send-request-container'
 
 
-    const form = useRef();
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs
-            .sendForm('service_242z369', 'template_ljnafnb', form.current, {
-                publicKey: '',
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                },
-            );
-    };
 
     return (
-        <form ref={form} onSubmit={sendEmail} className={notFoundStyle}>
+        <form onSubmit={()=>{}} className={notFoundStyle}>
             <div className={notFoundContainerStyle}>
                 {!useBasketStyles && (
                     <>
@@ -51,15 +33,14 @@ const NotFound = ({useBasketStyles}) => {
                 </div>
 
                 <div className={`upload-container`}>
-                    <FileUploader/>
+                    <input name='files' type="file"/>
                     <p>Заявка или карточка компании в формате txt, doc, pdf (максимум 10 файлов)</p>
                 </div>
 
                 <div className={sendContainerStyle}>
                     <button type={`submit`} className={`send-button`}>Отправить заявку</button>
-                    <p>Нажимая кнопку, Вы соглашаетесь с <a href={`#`}>Политикой обработки персональных данных</a></p>
+                    <p>Нажимая кнопку, Вы соглашаетесь с <Link className={`link`} to={`policy`}>Политикой обработки персональных данных</Link></p>
                 </div>
-
             </div>
         </form>
     );
