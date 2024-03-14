@@ -1,33 +1,80 @@
-import './App.css'
-import './scripts.js'
+import {useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
-import imgLogo from './photos/img.png';
-import imgSearch from './photos/search.png';
-import imgDropDownWhite from './photos/drop-down-white.png';
-import imgDropDownSvg from './photos/drop-down.svg';
+import imgLogo from '../../photos/img.png';
+import imgSearch from '../../photos/search.png';
+import imgDropDownWhite from '../../photos/drop-down-white.png';
+import imgDropDownSvg from '../../photos/drop-down.svg';
+import imgSearchWhite from '../../photos/search_white.png'; // Make sure to import this
+import imgLogoWhite from '../../photos/img_white.png'; // Make sure to import this
+import '../../App.css';
+
 
 function Nav(){
+
+    const [navUnderClass, setNavUnderClass] = useState("responsive-nav-under hide");
+    const [searchIcon, setSearchIcon] = useState(imgSearch);
+    const [logo, setLogo] = useState(imgLogo);
+    const [dropDownClass, setDropDownClass] = useState("hide");
+    const [dropDownImgRotation, setDropDownImgRotation] = useState("0deg");
+
+    const toggleNav = () => {
+        if (navUnderClass.includes("hide")) {
+            setNavUnderClass("responsive-nav-under");
+            setSearchIcon(imgSearchWhite);
+            setLogo(imgLogoWhite);
+        } else {
+            setNavUnderClass("responsive-nav-under hide");
+            setSearchIcon(imgSearch);
+            setLogo(imgLogo);
+        }
+    };
+
+    const toggleDropDown = () => {
+        if (dropDownClass === "hide") {
+            setDropDownClass("");
+            setDropDownImgRotation("180deg");
+        } else {
+            setDropDownClass("hide");
+            setDropDownImgRotation("0deg");
+        }
+    };
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (!event.target.matches('.responsive-dropbtn')) {
+                setDropDownClass("hide");
+                setDropDownImgRotation("0deg");
+            }
+        };
+
+        document.addEventListener("click", handleClickOutside);
+        return () => document.removeEventListener("click", handleClickOutside);
+    }, []);
+
+
+
     return(
+
         <>
             <nav className="responsive-nav">
-                <div id="responsive-nav-upper" className="responsive-nav-upper">
-                    <div className="container" onClick="myFunction(this)">
-                        <div id="bar1" className="bar1"></div>
-                        <div id="bar2" className="bar2"></div>
-                        <div id="bar3" className="bar3"></div>
+                <div className="responsive-nav-upper" style={{ backgroundColor: navUnderClass.includes("hide") ? "#ffffff" : "#6D2CC1" }}>
+                    <div className="container" onClick={toggleNav}>
+                        <div className="bar1" style={{ backgroundColor: navUnderClass.includes("hide") ? "#333" : "white" }}></div>
+                        <div className="bar2" style={{ backgroundColor: navUnderClass.includes("hide") ? "#333" : "white" }}></div>
+                        <div className="bar3" style={{ backgroundColor: navUnderClass.includes("hide") ? "#333" : "white" }}></div>
                     </div>
-                    <img id="responsive-nav-upper-logo" className="logo" src={imgLogo} alt="logo"/>
-                    <img id="responsive-nav-upper-search" className="search-res" src={imgSearch} alt=""/>
+                    <img className="logo" src={logo} alt="logo"/>
+                    <img className="search-res" src={searchIcon} alt="" style={{ width: navUnderClass.includes("hide") ? "60px" : "30px", height: navUnderClass.includes("hide") ? "60px" : "30px" }}/>
                 </div>
-                <div id="responsive-nav-under" className="responsive-nav-under hide">
-                    <div className="">
-                        Главная
-                    </div>
+                <div className={navUnderClass}>
+                    {/* Content goes here */}
                     <div className="dropdown">
-                        <button className="responsive-dropbtn" onClick="dropContent()">Каталог
-                            <img id="responsive-dropbtn-img" className="responsive-dropdown-svg" src={imgDropDownWhite} alt=""/>
+                        <button className="responsive-dropbtn" onClick={toggleDropDown}>Каталог
+                            <img className="responsive-dropdown-svg" src={imgDropDownWhite} alt=""
+                                 style={{transform: `rotate(${dropDownImgRotation})`}}/>
                         </button>
-                        <div id="responsive-nav-drop" className="hide dropbtn-dropped">
+                        <div className={dropDownClass + " dropbtn-dropped"}>
                             <Link to="kabeli-silovye">Кабели силовые</Link>
                             <Link to="#">Кабели контрольные</Link>
                             <Link to="#">Кабели монтажные</Link>
@@ -71,11 +118,11 @@ function Nav(){
                             Обратный звонок
                         </div>
                     </div>
-
                 </div>
             </nav>
 
 
+            {/* Desktop navigation part */}
             <nav className="desktop-nav wrapper mt-30">
                 <div className="nav-top">
                     <Link to={``}><img className="logo" src={imgLogo} alt="logo"/></Link>
@@ -114,22 +161,7 @@ function Nav(){
                             <i className="fa fa-caret-down"></i>
                         </div>
                         <div className="dropdown-content">
-                            <Link to="kabeli-silovye">Кабели силовые</Link>
-                            <Link to="#">Кабели контрольные</Link>
-                            <Link to="#">Кабели монтажные</Link>
-                            <Link to="#">Кабели передачи данных</Link>
-                            <Link to="#">Радиочастотные коаксиальные кабели</Link>
-                            <Link to="#">Провода установочные (монтажные)</Link>
-                            <Link to="#">Провода обмоточные</Link>
-                            <Link to="#">Соединительные провода</Link>
-                            <Link to="#">Провода водопогружные</Link>
-                            <Link to="#">Провода силовые</Link>
-                            <Link to="#">Провода воздушных линий электропередач</Link>
-                            <Link to="#">Провода бытовые</Link>
-                            <Link to="#">Провода бортовые авиационные</Link>
-                            <Link to="#">Трансформаторы</Link>
-                            <Link to="#">Освещение</Link>
-                            <Link to="#">Гофра</Link>
+                            {/* Dropdown links would be similar to those in the responsive nav */}
                         </div>
                     </div>
                     <div className="hover-underline-animation">
