@@ -455,6 +455,7 @@ desktop-nav{
 }
 .about-benefits-body-container-img{
     width: 24%;
+    height: auto;
 }
 .catalog{
     margin-top: 25px;
