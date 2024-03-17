@@ -47,7 +47,6 @@ function CablePage() {
         setPopupOpen(true);
     };
 
-
     const saveData = (obj) => {
         setSelectedData(obj);
     }

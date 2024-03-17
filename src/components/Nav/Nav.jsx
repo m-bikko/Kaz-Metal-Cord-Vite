@@ -161,7 +161,22 @@ function Nav(){
                             <i className="fa fa-caret-down"></i>
                         </div>
                         <div className="dropdown-content">
-                            {/* Dropdown links would be similar to those in the responsive nav */}
+                            <Link to="kabeli-silovye">Кабели силовые</Link>
+                            <Link to="#">Кабели контрольные</Link>
+                            <Link to="#">Кабели монтажные</Link>
+                            <Link to="#">Кабели передачи данных</Link>
+                            <Link to="#">Радиочастотные коаксиальные кабели</Link>
+                            <Link to="#">Провода установочные (монтажные)</Link>
+                            <Link to="#">Провода обмоточные</Link>
+                            <Link to="#">Соединительные провода</Link>
+                            <Link to="#">Провода водопогружные</Link>
+                            <Link to="#">Провода силовые</Link>
+                            <Link to="#">Провода воздушных линий электропередач</Link>
+                            <Link to="#">Провода бытовые</Link>
+                            <Link to="#">Провода бортовые авиационные</Link>
+                            <Link to="#">Трансформаторы</Link>
+                            <Link to="#">Освещение</Link>
+                            <Link to="#">Гофра</Link>
                         </div>
                     </div>
                     <div className="hover-underline-animation">
