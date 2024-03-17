@@ -1,12 +1,15 @@
 .card-loader {
-    width: 75%;
+    width: 80%;
 }
 .card-container {
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-    gap: 1.5rem;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*gap: 1.5rem;*/
 }
 
 
@@ -28,11 +31,12 @@
     font-size: 16px;
     font-weight: 500;
 
-    margin-top: 1.5rem;
+    /*margin-top: 1.5rem;*/
     padding: 15px 34px;
 
     transition: 0.3s all ease;
 }
+
 .download-button button:hover {
     background-color: #6D2CC1;
     color: #fff;

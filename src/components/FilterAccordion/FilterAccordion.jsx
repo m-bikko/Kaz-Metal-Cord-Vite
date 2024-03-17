@@ -12,17 +12,18 @@ const FilterAccordion = ({ type, checkbox, onFilterChange }) => {
         setIsActive(!isActive);
     };
 
+
     const handleChange = (e) => {
-        console.log(e.target)
         const { value, checked } = e.target;
-
+        let newSelected;
         if (checked) {
-            setSelected((oldData) => [...oldData, value]);
+            newSelected = [...selected, value];
         } else {
-            setSelected((oldData) => oldData.filter((item) => item !== value));
+            newSelected = selected.filter((item) => item !== value);
         }
+        setSelected(newSelected); // Обновляем состояние selected сразу
 
-        onFilterChange(type, [...selected, value]);
+        onFilterChange(type, newSelected);
     };
 
     useEffect(() => {
@@ -67,8 +68,8 @@ const FilterAccordion = ({ type, checkbox, onFilterChange }) => {
                             id={idx}
                             type={`checkbox`}
                             value={item}
-                            checked={selected.includes(item)}
-                            onChange={handleChange}
+                            // checked={}
+                            onChange={(e) => handleChange(e)}
                         />
                         <label htmlFor={idx}>{item}</label>
                     </div>

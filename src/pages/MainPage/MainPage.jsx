@@ -77,7 +77,7 @@ function MainPage(){
                     Каталог
                 </div>
                 <div className="products">
-                    <a className="products-container" href="./Product.html">
+                    <a className="products-container" href="kabeli-silovye">
                         <div className="">
                             <div className="product">
                                 <div className="product-name">

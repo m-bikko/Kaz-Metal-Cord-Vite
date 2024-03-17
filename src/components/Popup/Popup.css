@@ -18,6 +18,12 @@
 }
 
 
+.count-msg {
+    width: 30px;
+    height: 30px;
+    background-color: #0087ca;
+}
+
 .popup.active {
     opacity: 1;
     pointer-events: all;
@@ -25,6 +31,7 @@
 
 .popup-content {
     width: 50%;
+    height: auto;
     border-radius: 10px;
     padding: 50px;
     background-color: #fff;
@@ -33,13 +40,13 @@
     position: relative;
 }
 .close-link{
-    height: 80px;
     width: 100%;
     display: flex;
     justify-content: end;
     align-items: center;
-    color: red;
+    color: #fff;
     font-size: 20px;
+    padding: 40px 0;
     /*position: fixed;*/
     /*top: 2rem;*/
     /*right: 2rem;*/
@@ -57,10 +64,11 @@
 
 @media only screen and (max-width: 768px) {
     .popup-content {
-        width: 90%;
+        width: 100%;
     }
     .close-link{
-        position: fixed;
+        position: absolute;
+        color: red;
     }
 }
 
@@ -104,11 +112,4 @@
 
 /*.popup-content.active {*/
 /*    transform: scale(1);*/
-/*}*/
-
-/*@media only screen and (max-width: 768px) {*/
-/*    .popup-content {*/
-/*        width: 100%;*/
-/*        height: 100%;*/
-/*    }*/
 /*}*/

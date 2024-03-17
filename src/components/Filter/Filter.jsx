@@ -1,28 +1,37 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import './Filter.css'
 import FilterAccordion from '../FilterAccordion/FilterAccordion.jsx'
 import filterData from '../Shared/kabeli-silovye-filter.json'
 
-function Filter() {
+function Filter({ saveData }) {
     const [isActive, setIsActive] = useState(false);
     const [selectedFilters, setSelectedFilters] = useState({});
+
 
     const handleIsActive = () => {
         setIsActive(!isActive);
     }
-    // const [selectedFilters, setSelectedFilters] = useState({});
 
     const handleFilterChange = (type, values) => {
-        setSelectedFilters((prevFilters) => ({
-            ...prevFilters,
-            [type]: values,
-        }));
-        console.log(selectedFilters)
-        // onFilterChange(selectedFilters);
+        if (values.length === 0) { // Если нет выбранных данных
+            setSelectedFilters(null); // Установить selectedFilters в null
+        }
+        else {
+            setSelectedFilters((prevFilters) => ({
+                ...prevFilters,
+                [type]: values,
+            }));
+        }
     };
+
+    useEffect(() => {
+        saveData(selectedFilters)
+    }, [saveData, selectedFilters]);
+
 
     return (
         <div className={`filter`}>
+            {/*<button onClick={()=>{}>Change data</button>*/}
             <button className={`filter-button ${isActive? 'active':''}`} onClick={handleIsActive}>
                 {
                     isActive ?
@@ -41,22 +50,22 @@ function Filter() {
                 <FilterAccordion
                     type={`Количество скруток`}
                     checkbox={filterData}
-                    // onFilterChange={handleFilterChange}
+                    onFilterChange={handleFilterChange}
                 />
                 <FilterAccordion
                     type={`Количество жил`}
                     checkbox={filterData}
-                    // onFilterChange={handleFilterChange}
+                    onFilterChange={handleFilterChange}
                 />
                 <FilterAccordion
                     type={`Марка`}
                     checkbox={filterData}
-                    // onFilterChange={handleFilterChange}
+                    onFilterChange={handleFilterChange}
                 />
                 <FilterAccordion
                     type={`Размер сечения, мм2`}
                     checkbox={filterData}
-                    // onFilterChange={handleFilterChange}
+                    onFilterChange={handleFilterChange}
                 />
             </div>
         </div>

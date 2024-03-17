@@ -1,6 +1,8 @@
+import React, {useEffect, useState} from "react";
 import './Popup.css'
-import React from "react";
+
 const Popup = ({isOpen, setIsOpen, children}) => {
+
     return (
         <div className={isOpen ? 'popup active' : 'popup'} onClick={() => {setIsOpen(false)}}>
             <a className={`close-link`}>

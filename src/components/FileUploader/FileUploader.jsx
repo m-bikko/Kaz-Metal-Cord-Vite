@@ -13,9 +13,8 @@ const FileUploader = ({ updateSelectedFiles }) => {
 
         if (selectedFiles.length + filesArray.length <= maxFileCount) {
             setSelectedFiles((prevFiles) => [...prevFiles, ...filesArray]);
-            updateSelectedFiles([...selectedFiles, ...filesArray]); // Обновляем выбранные файлы в родительском компоненте
+            updateSelectedFiles([...selectedFiles, ...filesArray]);
         } else {
-            // Добавьте здесь обработку случая, когда выбрано слишком много файлов
             console.error('Выбрано слишком много файлов');
         }
     };
@@ -35,6 +34,7 @@ const FileUploader = ({ updateSelectedFiles }) => {
                 onChange={handleFileChange}
                 ref={fileInputRef}
                 style={{ display: 'none' }}
+                name={`files`}
             />
             <button className="add-file-button" onClick={() => fileInputRef.current.click()}>
                 Прикрепить файлы

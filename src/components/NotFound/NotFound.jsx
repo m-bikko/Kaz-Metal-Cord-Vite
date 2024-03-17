@@ -15,10 +15,53 @@ const NotFound = ({useBasketStyles}) => {
     const inputInfoStyle = useBasketStyles ? 'input-info-basket' : 'input-info';
     const sendContainerStyle = useBasketStyles ? 'send-request-container-basket' : 'send-request-container'
 
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        const clientName = form.current['from_name'].value;
+        const clientPhone = form.current['from_tel'].value;
+        const clientMessage = form.current['message'].value;
+
+        const messageContent = `name: ${clientName}\nphone: ${clientPhone}\nmessage: ${clientMessage}`;
+        const formData = new FormData();
+
+
+        formData.append('to', 'abdulazizbolat4@gmail.com'); // Set the recipient's email address as a constant
+        formData.append('subject', `Request from ${clientName}`); // Set the subject line to include the client's name
+        formData.append('text', messageContent); // Append the constructed message content
+
+
+        const fileInput = document.querySelector('input[type="file"]');
+        if (fileInput && fileInput.files.length > 0) {
+            for (let i = 0; i < fileInput.files.length; i++) {
+                formData.append('files', fileInput.files[i]);
+            }
+        }
+
+
+        fetch('https://send-email-with-file.vercel.app/send', {
+            method: 'POST',
+            body: formData,
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                return response.text();
+            })
+            .then(() => {
+                console.log('SUCCESS!');
+            })
+            .catch((error) => {
+                console.log('FAILED...', error.message);
+            });
+    };
+
 
 
     return (
-        <form onSubmit={()=>{}} className={notFoundStyle}>
+        <form ref={form} onSubmit={sendEmail} className={notFoundStyle}>
             <div className={notFoundContainerStyle}>
                 {!useBasketStyles && (
                     <>
@@ -27,13 +70,14 @@ const NotFound = ({useBasketStyles}) => {
                     </>
                 )}
                 <div className={inputInfoStyle}>
-                    <input name={`from_name`} placeholder="Ваше имя"/>
-                    <InputMask name={`from_tel`} mask="+7 (999) 999-99-99" maskChar="*" placeholder="+7 (***) *** ** **" />
-                    <input name={`message`} placeholder="Сообщение"/>
+                    <input name={`from_name`} placeholder="Ваше имя" onChange={handleInput}/>
+                    <InputMask name={`from_tel`} mask="+7 (999) 999-99-99" maskChar="*" placeholder="+7 (***) *** ** **"  onChange={handleInput}/>
+                    <input name={`message`} placeholder="Сообщение" onChange={handleInput}/>
                 </div>
 
                 <div className={`upload-container`}>
-                    <input name='files' type="file"/>
+                    {/*<input name='files' type="file"/>*/}
+                    <FileUploader />
                     <p>Заявка или карточка компании в формате txt, doc, pdf (максимум 10 файлов)</p>
                 </div>
 

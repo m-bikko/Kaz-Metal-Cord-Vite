@@ -8,7 +8,7 @@ import Contacts from "./pages/Contacts/Contacts.jsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage/PrivacyPolicyPage.jsx";
 import { Routes, Route } from 'react-router-dom';
 import Layout from "./Layout.jsx";
-import Post from "./components/Post.jsx";
+// import Post from "./components/Post.jsx";
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
             <Route path="contacts" element={<Contacts/>}/>
             <Route path="kak-kupit" element={<HowToBuyPage/>}/>
             <Route path="policy" element={<PrivacyPolicyPage/>}/>
-            <Route path="post/:kabeli/:mark" element={<Post/>}/>
+            {/*<Route path="post/:kabeli/:mark" element={<Post/>}/>*/}
         </Route>
     </Routes>
   )

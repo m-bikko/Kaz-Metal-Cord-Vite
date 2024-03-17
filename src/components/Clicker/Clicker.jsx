@@ -1,18 +1,24 @@
-import React, {useState} from "react";
+// Clicker.jsx
+
+import React, { useState } from "react";
 import './Clicker.css';
 
-const Clicker = ({quantity = 1, setCountQuantity, useCablePageStyles}) => {
+const Clicker = ({ quantity = 1, setCountQuantity, useCablePageStyles }) => {
     const [count, setCount] = useState(quantity);
 
     const handleIncrement = () => {
-        setCount(count + 1);
-        setCountQuantity(count + 1)
+        const newCount = count + 1;
+        setCount(newCount);
+        setCountQuantity(newCount);
+        // updateLocalStorage(newCount);
     };
 
     const handleDecrement = () => {
-        if(count > 1) {
-            setCount(count - 1);
-            setCountQuantity(count - 1)
+        if (count > 1) {
+            const newCount = count - 1;
+            setCount(newCount);
+            setCountQuantity(newCount);
+            // updateLocalStorage(newCount);
         }
     };
 
