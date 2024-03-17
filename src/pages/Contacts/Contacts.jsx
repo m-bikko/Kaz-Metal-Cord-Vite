@@ -21,7 +21,7 @@ function Contacts(){
 
                 </div>
                 <div className="contacts-adress">
-                    <div>Казахстан, г. Алматы, Жибек Жолы 135</div>
+                    <div>г.Астана, район Нура, улица Култегин, дом 19/1, кв. 362</div>
                     <div>Пн-Пт: 09:00-18:00</div>
                     <div>Сб, Вс: выходной</div>
                 </div>
