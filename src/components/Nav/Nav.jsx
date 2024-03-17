@@ -4,8 +4,8 @@ import imgLogo from '../../photos/img.png';
 import imgSearch from '../../photos/search.png';
 import imgDropDownWhite from '../../photos/drop-down-white.png';
 import imgDropDownSvg from '../../photos/drop-down.svg';
-import imgSearchWhite from '../../photos/search_white.png'; // Make sure to import this
-import imgLogoWhite from '../../photos/img_white.png'; // Make sure to import this
+import imgSearchWhite from '../../photos/search_white.png';
+import imgLogoWhite from '../../photos/img_white.png';
 import '../../App.css';
 
 
@@ -104,7 +104,7 @@ function Nav(){
                     </div>
                     <div>
                         <div>
-                            г. Алматы, Жибек Жолы 135
+                            г. Астана, Улица Култегин, 19/1
                         </div>
                         <div>
                             + 7 (727) 312-26-02
@@ -138,7 +138,7 @@ function Nav(){
                     </fieldset>
                     <div>
                         <div>
-                            г. Алматы, Жибек Жолы 135
+                            г. Астана, Улица Култегин, 19/1
                         </div>
                         <div>
                             + 7 (727) 312-26-02

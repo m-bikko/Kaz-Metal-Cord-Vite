@@ -83,7 +83,10 @@ function Footer(){
                         <img src={compass} alt=""/>
                         <div className="adress-txt">
                             <div>
-                                г. Алматы, Жибек Жолы 135
+                                г. Астана
+                            </div>
+                            <div>
+                                Улица Култегин, 19/1
                             </div>
                             <div>
                                 + 7 (727) 312-26-02
