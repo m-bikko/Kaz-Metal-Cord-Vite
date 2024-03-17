@@ -1,7 +1,7 @@
-import './App.css'
-import './scripts.js'
-import imgLogo from './photos/img_white.png';
-import compass from "./photos/compass.png";
+import '../../App.css'
+import '../../scripts.js'
+import imgLogo from '../../photos/img_white.png';
+import compass from "../../photos/compass.png";
 // import {a} from "react-router-dom";
 
 function Footer(){

@@ -1,6 +1,6 @@
 
-import Nav from "./Nav.jsx";
-import Footer from "./Footer.jsx";
+import Nav from "./components/Nav/Nav.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 import {Outlet} from "react-router-dom";
 
 function Layout() {
