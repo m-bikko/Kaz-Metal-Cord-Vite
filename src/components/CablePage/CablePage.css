@@ -23,7 +23,7 @@ button {
     display: flex;
     justify-content: right;
     align-items: center;
-    top: 10%;
+    top: 15%;
     right: 10px;
 }
 .basket-container.active{

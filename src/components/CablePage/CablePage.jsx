@@ -10,7 +10,7 @@ import Popup from "../Popup/Popup.jsx";
 import Clicker from "../Clicker/Clicker.jsx";
 import remove from '../../photos/image/remove.png';
 
-const CablePage = ({cardData, filterCardData, cardImage}) => {
+const CablePage = ({cardData, filterCardData, cardImage, pageTitle}) => {
     const [isPopupOpen, setPopupOpen] = useState(false);
     const [cartItems, setCartItems] = useState([]);
     const [selectedData, setSelectedData] = useState({});
@@ -53,7 +53,7 @@ const CablePage = ({cardData, filterCardData, cardImage}) => {
             <div className={isPopupOpen ? "basket-container active" : "basket-container"}>
                 <button onClick={() => handlePopupOpen()}><img src={basket} alt=""/></button>
             </div>
-            <CableHints/>
+            <CableHints title={pageTitle}/>
             <div className="filter-text">
                 <h2>Фильтры</h2>
             </div>

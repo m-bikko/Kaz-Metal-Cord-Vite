@@ -74,6 +74,9 @@ function Footer(){
                     <div>
                         Радиочастотные коаксиальные кабели
                     </div>
+                    <div>
+                        <a className={`footer-link`} href={'soedinitelnye-provoda'}>Соединительные провода</a>
+                    </div>
                 </div>
                 <div className="phone-call-section">
                     <div className="phone-call">

@@ -5,7 +5,7 @@ import CablePage from "../../components/CablePage/CablePage";
 import image from '../../photos/products/кабели-контрольные.png'
 function KabeliKontrolniePage() {
     return (
-        <CablePage cardData={cardData} filterCardData={filterCardData} cardImage={image}/>
+        <CablePage cardData={cardData} filterCardData={filterCardData} cardImage={image} pageTitle={'Кабели контрольные'}/>
     );
 }
 

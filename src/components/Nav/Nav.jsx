@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 import imgLogo from '../../photos/img.png';
 import imgSearch from '../../photos/search.png';
@@ -77,14 +77,14 @@ function Nav(){
                         <div className={dropDownClass + " dropbtn-dropped"}>
                             <Link to="kabeli-silovye">Кабели силовые</Link>
                             <Link to="kabeli-kontrolnie">Кабели контрольные</Link>
-                            <Link to="#">Кабели монтажные</Link>
+                            <Link to="kabeli-montazhnye">Кабели монтажные</Link>
                             <Link to="#">Кабели передачи данных</Link>
                             <Link to="#">Радиочастотные коаксиальные кабели</Link>
                             <Link to="#">Провода установочные (монтажные)</Link>
-                            <Link to="#">Провода обмоточные</Link>
-                            <Link to="#">Соединительные провода</Link>
+                            <Link to="obmotochnye-provoda">Провода обмоточные</Link>
+                            <Link to="soedinitelnye-provoda">Соединительные провода</Link>
                             <Link to="#">Провода водопогружные</Link>
-                            <Link to="#">Провода силовые</Link>
+                            <Link to="provoda-silovye">Провода силовые</Link>
                             <Link to="#">Провода воздушных линий электропередач</Link>
                             <Link to="#">Провода бытовые</Link>
                             <Link to="#">Провода бортовые авиационные</Link>
@@ -94,13 +94,13 @@ function Nav(){
                         </div>
                     </div>
                     <div className="">
-                        Условия доставки
+                        <Link className={`nav-link`} to={`dostavka`}>Условия доставки</Link>
                     </div>
                     <div className="">
-                        Как купить
+                        <Link className={`nav-link`} to={`kak-kupit`}>Как купить</Link>
                     </div>
                     <div className="">
-                        Контакты
+                        <Link className={`nav-link`} to={`contacts`}>Контакты</Link>
                     </div>
                     <div>
                         <div>

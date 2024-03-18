@@ -1,11 +1,11 @@
 import './CableHints.css'
 
-function CableHints() {
+const CableHints = ({title}) => {
 
     return (
         <div className={`hints`}>
 
-            <h1>Кабели силовые</h1>
+            <h1>{title}</h1>
 
             <div className={`manager-contact-container`}>
                 <p className={`manager-contact-left`}>

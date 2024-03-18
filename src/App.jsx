@@ -35,7 +35,6 @@ function App() {
                 <Route path="contacts" element={<Contacts/>}/>
                 <Route path="kak-kupit" element={<HowToBuyPage/>}/>
                 <Route path="policy" element={<PrivacyPolicyPage/>}/>
-                {/*<Route path="post/:kabeli/:mark" element={<Post/>}/>*/}
             </Route>
         </Routes>
     )
