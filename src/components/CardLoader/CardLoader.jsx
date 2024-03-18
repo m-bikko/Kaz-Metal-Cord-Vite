@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
 import './CardLoader.css';
 import Card from "../Card/Card.jsx";
-import cable from '../Shared/image/cable.png';
-import cardData from '../Shared/kabeli-silovye.json';
-import {disable} from "express/lib/application";
+import cable from '../../photos/products/кабели-силовые.png';
+// import cardData from '../Shared/kabeli-silovye.json';
+// import {disable} from "express/lib/application";
 
-const CardLoader = ({selectedData}) => {
+const CardLoader = ({selectedData, cardData, cardImage}) => {
     const [visibleCards, setVisibleCards] = useState(6);
 
     const handleLoadMore = () => {
@@ -20,7 +20,10 @@ const CardLoader = ({selectedData}) => {
     const dict = {
         "Количество жил":"количество_жил",
         "Марка":"mark",
-        "Размер сечения, мм2":"размер_сечения_мм2"
+        "Размер сечения, мм2":"размер_сечения_мм2",
+        "diameter_mm":"diameter",
+        "grade":"mark",
+        "типы":"category"
     }
 
 
@@ -44,15 +47,15 @@ const CardLoader = ({selectedData}) => {
         <div className={`card-loader`}>
             <div className={`card-container`}>
                 {filteredCards.slice(0, visibleCards).map((item, idx) => (
-                    <Card key={idx} image={cable} name={item.name} description={item.category} price={item.price} productId={idx} />
+                    <Card key={idx} image={cardImage} name={item.name} description={item.category} price={item.price} productId={idx} />
                 ))}
             </div>
             {
                 canLoadMore && (
-                <div className={`download-button`}>
-                    <button onClick={handleLoadMore}>Загрузить еще</button>
-                </div>
-            )}
+                    <div className={`download-button`}>
+                        <button onClick={handleLoadMore}>Загрузить еще</button>
+                    </div>
+                )}
         </div>
     );
 }

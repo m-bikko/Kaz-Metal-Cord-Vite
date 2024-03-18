@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import './Card.css'
-import cable from "../Shared/image/cable.png";
 import Clicker from "../Clicker/Clicker.jsx";
 
 const Card = ({ productId, image, name, description, price }) => {
@@ -11,10 +10,10 @@ const Card = ({ productId, image, name, description, price }) => {
     const handleBuyClick = () => {
         const storedData = JSON.parse(localStorage.getItem('storedCard')) || [];
 
-        const existingCard = storedData.find(item => item.productId === productId);
+        const existingCardIndex = storedData.findIndex(item => item.productId === productId && item.name === name);
 
-        if (existingCard != null) {
-            existingCard.quantity += countQuantity;
+        if (existingCardIndex !== -1) {
+            storedData[existingCardIndex].quantity += countQuantity;
         }
         else {
             storedData.push({
@@ -32,7 +31,7 @@ const Card = ({ productId, image, name, description, price }) => {
 
     return (
         <div className={`card`}>
-            <img src={cable} alt={`product`} />
+            <img src={image} alt={`product`} />
             <div className={`card-content`}>
                 <p className={`description`}>{name}</p>
                 <p className={`price`}>от {price} тг.</p>

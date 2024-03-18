@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from "react";
 import './Filter.css'
 import FilterAccordion from '../FilterAccordion/FilterAccordion.jsx'
-import filterData from '../Shared/kabeli-silovye-filter.json'
 
-function Filter({ saveData }) {
+function Filter({ saveData, filterData }) {
     const [isActive, setIsActive] = useState(false);
     const [selectedFilters, setSelectedFilters] = useState({});
 
@@ -47,26 +46,36 @@ function Filter({ saveData }) {
                 <span>Фильтры</span>
             </button>
             <div className={`filter-container ${isActive ? 'active' : ''}`}>
-                <FilterAccordion
-                    type={`Количество скруток`}
-                    checkbox={filterData}
-                    onFilterChange={handleFilterChange}
-                />
-                <FilterAccordion
-                    type={`Количество жил`}
-                    checkbox={filterData}
-                    onFilterChange={handleFilterChange}
-                />
-                <FilterAccordion
-                    type={`Марка`}
-                    checkbox={filterData}
-                    onFilterChange={handleFilterChange}
-                />
-                <FilterAccordion
-                    type={`Размер сечения, мм2`}
-                    checkbox={filterData}
-                    onFilterChange={handleFilterChange}
-                />
+                {
+                    Object.keys(filterData).map(filterItem => (
+                        <FilterAccordion
+                            type={filterItem}
+                            checkbox={filterData}
+                            onFilterChange={handleFilterChange}
+                        />
+                        // <div>{filterItem}</div>
+                    ))
+                }
+                {/*<FilterAccordion*/}
+                {/*    type={`Количество скруток`}*/}
+                {/*    checkbox={filterData}*/}
+                {/*    onFilterChange={handleFilterChange}*/}
+                {/*/>*/}
+                {/*<FilterAccordion*/}
+                {/*    type={`Количество жил`}*/}
+                {/*    checkbox={filterData}*/}
+                {/*    onFilterChange={handleFilterChange}*/}
+                {/*/>*/}
+                {/*<FilterAccordion*/}
+                {/*    type={`Марка`}*/}
+                {/*    checkbox={filterData}*/}
+                {/*    onFilterChange={handleFilterChange}*/}
+                {/*/>*/}
+                {/*<FilterAccordion*/}
+                {/*    type={`Размер сечения, мм2`}*/}
+                {/*    checkbox={filterData}*/}
+                {/*    onFilterChange={handleFilterChange}*/}
+                {/*/>*/}
             </div>
         </div>
     )

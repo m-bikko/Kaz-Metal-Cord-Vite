@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './FileUploader.css';
-import removeIcon from '../Shared/image/remove.png';
+import removeIcon from '../../photos/image/remove.png';
 
 const FileUploader = ({ updateSelectedFiles }) => {
     const fileInputRef = useRef(null);

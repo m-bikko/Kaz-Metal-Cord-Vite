@@ -29,7 +29,7 @@ function Footer(){
                         <a className={`footer-link`} href={'contacts'}>Контакты</a>
                     </div>
                     <div>
-                        Провода силовые
+                        <a className={`footer-link`} href={'provoda-silovye'}>Провода силовые</a>
                     </div>
                     <div>
                         Провода бытовые
@@ -40,16 +40,16 @@ function Footer(){
                         <a className={`footer-link`} href={'kabeli-silovye'}>Кабели силовые</a>
                     </div>
                     <div>
-                        Кабели контрольные
+                        <a className={`footer-link`} href={'kabeli-kontrolnie'}>Кабели контрольные</a>
                     </div>
                     <div>
-                        Кабели монтажные
+                        <a className={`footer-link`} href={'kabeli-montazhnye'}>Кабели монтажные</a>
                     </div>
                     <div>
                         Кабели передачи данных
                     </div>
                     <div>
-                        Провода обмоточные
+                        <a className={`footer-link`} href={'obmotochnye-provoda'}>Провода обмоточные</a>
                     </div>
                     <div>
                         Трансформаторы
@@ -83,10 +83,7 @@ function Footer(){
                         <img src={compass} alt=""/>
                         <div className="adress-txt">
                             <div>
-                                г. Астана
-                            </div>
-                            <div>
-                                Улица Култегин, 19/1
+                                г. Алматы, Жибек Жолы 135
                             </div>
                             <div>
                                 + 7 (727) 312-26-02

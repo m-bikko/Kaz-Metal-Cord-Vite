@@ -21,7 +21,7 @@ const FilterAccordion = ({ type, checkbox, onFilterChange }) => {
         } else {
             newSelected = selected.filter((item) => item !== value);
         }
-        setSelected(newSelected); // Обновляем состояние selected сразу
+        setSelected(newSelected);
 
         onFilterChange(type, newSelected);
     };

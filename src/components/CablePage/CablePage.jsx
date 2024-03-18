@@ -1,18 +1,16 @@
-// CablePage.jsx
-
 import React, { useState, useEffect } from "react";
 import './CablePage.css';
-import CableHints from "../../components/CableHints/CableHints.jsx";
-import Filter from "../../components/Filter/Filter.jsx";
-import CardLoader from "../../components/CardLoader/CardLoader.jsx";
-import Specification from "../../components/Specification/Specification.jsx";
-import NotFound from "../../components/NotFound/NotFound.jsx";
-import basket from "../../components/Shared/image/Basket.png";
-import Popup from "../../components/Popup/Popup.jsx";
-import Clicker from "../../components/Clicker/Clicker.jsx";
-import remove from '../../components/Shared/image/remove.png';
+import CableHints from "../CableHints/CableHints.jsx";
+import Filter from "../Filter/Filter.jsx";
+import CardLoader from "../CardLoader/CardLoader.jsx";
+import Specification from "../Specification/Specification.jsx";
+import NotFound from "../NotFound/NotFound.jsx";
+import basket from "../../photos/image/Basket.png";
+import Popup from "../Popup/Popup.jsx";
+import Clicker from "../Clicker/Clicker.jsx";
+import remove from '../../photos/image/remove.png';
 
-function CablePage() {
+const CablePage = ({cardData, filterCardData, cardImage}) => {
     const [isPopupOpen, setPopupOpen] = useState(false);
     const [cartItems, setCartItems] = useState([]);
     const [selectedData, setSelectedData] = useState({});
@@ -21,7 +19,6 @@ function CablePage() {
         const storedCardData = JSON.parse(localStorage.getItem('storedCard')) || [];
         setCartItems(storedCardData);
     }, []);
-
 
     const updateLocalStorage = (newQuantity, index) => {
         const updatedCartItems = [...cartItems];
@@ -61,8 +58,8 @@ function CablePage() {
                 <h2>Фильтры</h2>
             </div>
             <div className="filter-cards">
-                <Filter saveData={saveData}/>
-                <CardLoader selectedData={selectedData}/>
+                <Filter saveData={saveData} filterData={filterCardData}/>
+                <CardLoader selectedData={selectedData} cardData={cardData} cardImage={cardImage}/>
             </div>
             <Specification/>
             <NotFound useBasketStyles={false}/>

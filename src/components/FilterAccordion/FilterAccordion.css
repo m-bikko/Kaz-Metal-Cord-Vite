@@ -40,10 +40,10 @@
 
 @media (max-width: 768px) {
     .accordion:after {
-        content: url(../Shared/image/AccordionOpen.png);
+        content: url(../../photos/image/AccordionOpen.png);
     }
     .accordion.active:after {
-        content: url(../Shared/image/AccordionClose.png);
+        content: url(../../photos/image/AccordionClose.png);
     }
 
     .accordion {
