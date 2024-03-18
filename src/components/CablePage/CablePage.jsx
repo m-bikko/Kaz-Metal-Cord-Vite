@@ -78,7 +78,7 @@ const CablePage = ({cardData, filterCardData, cardImage, pageTitle}) => {
                                         setCountQuantity={(newQuantity) => updateLocalStorage(newQuantity, idx)}
                                         updateLocalStorage={(newQuantity) => updateLocalStorage(newQuantity, idx)}
                                     />
-                                    <p>{item.price} тг.</p>
+                                    <p>{item.price * item.quantity} тг.</p>
                                 </div>
                             </div>
                             <button className="remove-card" onClick={() => handleRemoveCard(idx)}>

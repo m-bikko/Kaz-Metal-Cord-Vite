@@ -7,7 +7,7 @@
     /*display: grid;*/
     /*grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));*/
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     flex-wrap: wrap;
     /*gap: 1.5rem;*/
 }
@@ -20,6 +20,7 @@
     flex: 1;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .download-button button {
