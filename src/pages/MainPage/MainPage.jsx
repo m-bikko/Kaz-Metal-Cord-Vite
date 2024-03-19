@@ -8,8 +8,6 @@ import goTo from "../../photos/goto.png";
 import kabeli_kontrolnie from '../../photos/products/КабелиКонтрольные.png'
 
 
-
-
 function MainPage(){
     return(
         <>
@@ -78,9 +76,12 @@ function MainPage(){
                     Каталог
                 </div>
                 <div className="products">
-                    <a className="products-container" href="kabeli-silovye">
-                        <div className="">
-                            <div className="product">
+
+                    <a className="product-container" href="kabeli-silovye"
+                       style={{backgroundImage: 'url(src/photos/products/кабели-силовые.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'contain'}}>
+                        <div className="product-background">
+                            <div className="product-content">
                                 <div className="product-name">
                                     Кабели силовые
                                 </div>
@@ -89,6 +90,70 @@ function MainPage(){
                         </div>
                     </a>
 
+                    <a className="product-container" href="kabeli-kontrolnie"
+                       style={{backgroundImage: 'url(src/photos/products/кабели-контрольные.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Кабели контрольные
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="kabeli-montazhnye"
+                       style={{backgroundImage: 'url(src/photos/products/кабели-монтажные.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Кабели монтажные
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="obmotochnye-provoda"
+                       style={{backgroundImage: 'url(src/photos/products/обмоточные-провода.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Провода обмоточные
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="soedinitelnye-provoda"
+                       style={{backgroundImage: 'url(src/photos/products/соединительные-провода.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Соединительные провода
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="provoda-silovye"
+                       style={{backgroundImage: 'url(src/photos/products/провода-силовые.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Провода силовые
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
 
                 </div>
             </div>
