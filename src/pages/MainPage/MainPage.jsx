@@ -71,7 +71,7 @@ function MainPage(){
                     </div>
                 </div>
             </div>
-            <div className="catalog m-lr80">
+            <div className="catalog m-lr80" id="catalog">
                 <div className="unit-label">
                     Каталог
                 </div>

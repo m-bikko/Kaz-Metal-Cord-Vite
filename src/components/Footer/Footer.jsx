@@ -17,7 +17,7 @@ function Footer(){
                         <a className={`footer-link`} href={''}>Главная</a>
                     </div>
                     <div>
-                        Каталог
+                        <a className={`footer-link`} href={'#catalog'}>Каталог</a>
                     </div>
                     <div>
                         <a className={`footer-link`} href={'dostavka'}>Условия доставки</a>
@@ -32,7 +32,7 @@ function Footer(){
                         <a className={`footer-link`} href={'provoda-silovye'}>Провода силовые</a>
                     </div>
                     <div>
-                        Провода бытовые
+                        <a className={`footer-link`} href={'provoda-bytovye'}>Провода бытовые</a>
                     </div>
                 </div>
                 <div>
@@ -46,33 +46,33 @@ function Footer(){
                         <a className={`footer-link`} href={'kabeli-montazhnye'}>Кабели монтажные</a>
                     </div>
                     <div>
-                        Кабели передачи данных
+                        <a className={`footer-link`} href={'kabeli-peredachi-dannyh'}>Кабели передачи данных</a>
                     </div>
                     <div>
                         <a className={`footer-link`} href={'obmotochnye-provoda'}>Провода обмоточные</a>
                     </div>
                     <div>
-                        Трансформаторы
+                        <a className={`footer-link`} href={'transformatory'}>Трансформаторы</a>
                     </div>
                     <div>
-                        Освещение
+                        <a className={`footer-link`} href={'osveshchenie'}>Освещение</a>
                     </div>
                 </div>
                 <div>
                     <div>
-                        Кабельные муфты и наконечники
+                        <a className={`footer-link`} href={'kabelnye-mufty-i-nakonechniki'}>Кабельные муфты и наконечники</a>
                     </div>
                     <div>
-                        Трубы, кабель-каналы
+                        <a className={`footer-link`} href={'truby-kabel-kanaly'}>Трубы, кабель-каналы</a>
                     </div>
                     <div>
-                        Провода неизолированные
+                        <a className={`footer-link`} href={'neizolirovannye-provoda'}>Провода неизолированные</a>
                     </div>
                     <div>
-                        Провода бортовые авиационные
+                        <a className={`footer-link`} href={'provoda-bortovye-aviacionnye'}>Провода бортовые авиационные</a>
                     </div>
                     <div>
-                        Радиочастотные коаксиальные кабели
+                        <a className={`footer-link`} href={'radiochastotnye-koaksialnye-kabeli'}>Радиочастотные коаксиальные кабели</a>
                     </div>
                     <div>
                         <a className={`footer-link`} href={'soedinitelnye-provoda'}>Соединительные провода</a>

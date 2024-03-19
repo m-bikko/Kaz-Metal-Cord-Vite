@@ -78,18 +78,18 @@ function Nav(){
                             <Link to="kabeli-silovye">Кабели силовые</Link>
                             <Link to="kabeli-kontrolnie">Кабели контрольные</Link>
                             <Link to="kabeli-montazhnye">Кабели монтажные</Link>
-                            <Link to="#">Кабели передачи данных</Link>
-                            <Link to="#">Радиочастотные коаксиальные кабели</Link>
-                            <Link to="#">Провода установочные (монтажные)</Link>
+                            <Link to="kabeli-peredachi-dannyh">Кабели передачи данных</Link>
+                            <Link to="radiochastotnye-koaksialnye-kabeli">Радиочастотные коаксиальные кабели</Link>
+                            <Link to="provoda-ustanovochnye">Провода установочные (монтажные)</Link>
                             <Link to="obmotochnye-provoda">Провода обмоточные</Link>
                             <Link to="soedinitelnye-provoda">Соединительные провода</Link>
-                            <Link to="#">Провода водопогружные</Link>
+                            <Link to="provoda-vodopogruzhnye">Провода водопогружные</Link>
                             <Link to="provoda-silovye">Провода силовые</Link>
-                            <Link to="#">Провода воздушных линий электропередач</Link>
-                            <Link to="#">Провода бытовые</Link>
-                            <Link to="#">Провода бортовые авиационные</Link>
-                            <Link to="#">Трансформаторы</Link>
-                            <Link to="#">Освещение</Link>
+                            <Link to="provoda-vozdushnyh-linij-ehlektroperedach">Провода воздушных линий электропередач</Link>
+                            <Link to="provoda-bytovye">Провода бытовые</Link>
+                            <Link to="provoda-bortovye-aviacionnye">Провода бортовые авиационные</Link>
+                            <Link to="transformatory">Трансформаторы</Link>
+                            <Link to="osveshchenie">Освещение</Link>
                             <Link to="#">Гофра</Link>
                         </div>
                     </div>
@@ -165,18 +165,18 @@ function Nav(){
                             <Link to="kabeli-silovye">Кабели силовые</Link>
                             <Link to="kabeli-kontrolnie">Кабели контрольные</Link>
                             <Link to="kabeli-montazhnye">Кабели монтажные</Link>
-                            <Link to="#">Кабели передачи данных</Link>
-                            <Link to="#">Радиочастотные коаксиальные кабели</Link>
-                            <Link to="#">Провода установочные (монтажные)</Link>
+                            <Link to="kabeli-peredachi-dannyh">Кабели передачи данных</Link>
+                            <Link to="radiochastotnye-koaksialnye-kabeli">Радиочастотные коаксиальные кабели</Link>
+                            <Link to="provoda-ustanovochnye">Провода установочные (монтажные)</Link>
                             <Link to="obmotochnye-provoda">Провода обмоточные</Link>
                             <Link to="soedinitelnye-provoda">Соединительные провода</Link>
-                            <Link to="#">Провода водопогружные</Link>
+                            <Link to="provoda-vodopogruzhnye">Провода водопогружные</Link>
                             <Link to="provoda-silovye">Провода силовые</Link>
-                            <Link to="#">Провода воздушных линий электропередач</Link>
-                            <Link to="#">Провода бытовые</Link>
-                            <Link to="#">Провода бортовые авиационные</Link>
-                            <Link to="#">Трансформаторы</Link>
-                            <Link to="#">Освещение</Link>
+                            <Link to="provoda-vozdushnyh-linij-ehlektroperedach">Провода воздушных линий электропередач</Link>
+                            <Link to="provoda-bytovye">Провода бытовые</Link>
+                            <Link to="provoda-bortovye-aviacionnye">Провода бортовые авиационные</Link>
+                            <Link to="transformatory">Трансформаторы</Link>
+                            <Link to="osveshchenie">Освещение</Link>
                             <Link to="#">Гофра</Link>
                         </div>
                     </div>
