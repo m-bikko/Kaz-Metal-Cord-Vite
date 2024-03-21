@@ -34,8 +34,8 @@ const Card = ({ productId, image, name, description, price }) => {
             <img src={image} alt={`product`} />
             <div className={`card-content`}>
                 <p className={`description`}>{name}</p>
+                <p className={`hint`}>В связи с высокой волатильностью отпускных цен, актуальную стоимость уточняйте у менеджера</p>
                 <p className={`price`}>от {price} тг.</p>
-                <button className={`detail`}>Подробнее</button>
                 <div className={`button-container`}>
                     <Clicker setCountQuantity={handleSetCountQuantity}/>
                     <button className={`buy`} onClick={handleBuyClick}>
