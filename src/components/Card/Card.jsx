@@ -10,7 +10,7 @@ const Card = ({ productId, image, name, description, price }) => {
     const handleBuyClick = () => {
         const storedData = JSON.parse(localStorage.getItem('storedCard')) || [];
 
-        const existingCardIndex = storedData.findIndex(item => item.productId === productId && item.name === name);
+        const existingCardIndex = storedData.findIndex(item => item.name === name);
 
         if (existingCardIndex !== -1) {
             storedData[existingCardIndex].quantity += countQuantity;

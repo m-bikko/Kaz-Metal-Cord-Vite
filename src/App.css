@@ -119,10 +119,20 @@ desktop-nav{
     border: 1px #6D2CC1 solid;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
-.nav-top-btn:hover{
-    color: #faf8f8;
-    background-color: #6D2CC1;
+
+@media (hover: hover) {
+    .nav-top-btn:hover{
+        color: #faf8f8;
+        background-color: #6D2CC1;
+    }
 }
+@media (hover: none) {
+    .nav-top-btn:active{
+        color: #faf8f8;
+        background-color: #6D2CC1;
+    }
+}
+
 .nav-bottom{
     display: flex;
     justify-content: space-between;
@@ -466,16 +476,18 @@ desktop-nav{
 .products{
     display: flex;
     flex-wrap: wrap;
+    /*justify-content: center;*/
     width: 100%;
 }
 .product-container {
     position: relative;
     width: 21%;
+    min-width: 300px;
     height: 300px;
     overflow: hidden;
     text-decoration: none;
     border-radius: 20px;
-    margin: 1.5rem;
+    margin: 1.5%;
 }
 
 .product-background {
@@ -504,7 +516,7 @@ desktop-nav{
     align-items: center;
     padding: 20px;
     gap: 5%;
-    top: 70%;
+    top: 55%;
 }
 
 .product-name {

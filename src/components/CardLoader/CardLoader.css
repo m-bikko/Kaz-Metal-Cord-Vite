@@ -38,9 +38,17 @@
     transition: 0.3s all ease;
 }
 
-.download-button button:hover {
-    background-color: #6D2CC1;
-    color: #fff;
+@media (hover: hover) {
+    .download-button button:hover {
+        background-color: #6D2CC1;
+        color: #fff;
+    }
+}
+@media (hover: none) {
+    .download-button button:active {
+        background-color: #6D2CC1;
+        color: #fff;
+    }
 }
 
 @media only screen and (max-width: 768px) {

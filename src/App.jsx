@@ -26,6 +26,8 @@ import ProvodaVozdushnyhLinijEhlektroperedachPage from "./pages/CablePages/Provo
 import RadiochastotnyeKoaksialnyeKabeliPage from "./pages/CablePages/RadiochastotnyeKoaksialnyeKabeliPage";
 import TransformatoryPage from "./pages/CablePages/TransformatoryPage";
 import TrubyKabelKanalyPage from "./pages/CablePages/TrubyKabelKanalyPage";
+
+import SearchComponent from "./components/SearchComponent/SearchComponent";
 function App() {
 
     return (

@@ -9,7 +9,7 @@ import imgLogoWhite from '../../photos/img_white.png'; // Make sure to import th
 import '../../App.css';
 
 
-function Nav(){
+function Nav({onEnterPressed}){
 
     const [navUnderClass, setNavUnderClass] = useState("responsive-nav-under hide");
     const [searchIcon, setSearchIcon] = useState(imgSearch);
@@ -53,6 +53,20 @@ function Nav(){
     }, []);
 
 
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const handleChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+    const handleCleanChange = () => {
+        setSearchTerm("");
+    };
+
+    const handleKeyPress = (event) => {
+        if (event.key === "Enter") {
+            onEnterPressed(searchTerm);
+        }
+    };
 
     return(
 
@@ -127,8 +141,8 @@ function Nav(){
                 <div className="nav-top">
                     <Link to={``}><img className="logo" src={imgLogo} alt="logo"/></Link>
                     <fieldset className="field-container">
-                        <input type="text" placeholder="Поиск" className="field"/>
-                        <div className="icons-container">
+                        <input type="text" placeholder="Поиск" className="field" value={searchTerm} onChange={handleChange} onKeyPress={handleKeyPress}/>
+                        <div className="icons-container" onClick={handleCleanChange}>
                             <div className="icon-search"></div>
                             <div className="icon-close">
                                 <div className="x-up"></div>

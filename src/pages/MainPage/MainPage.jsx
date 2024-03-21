@@ -19,9 +19,9 @@ function MainPage(){
                     <div className="intro-img-second-txt">
                         Кабельная продукция высокого качества от производителя
                     </div>
-                    <div className="catalog-btn">
+                    <a className="catalog-btn" style={{textDecoration: 'none', color: 'white'}} href="/#catalog">
                         Каталог
-                    </div>
+                    </a>
                 </div>
             </div>
             <div className="about-company m-lr80">
@@ -115,6 +115,44 @@ function MainPage(){
                             </div>
                         </div>
                     </a>
+                    <a className="product-container" href="kabeli-peredachi-dannyh"
+                       style={{backgroundImage: 'url(src/photos/products/кабели-передачи-данных.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Кабели передачи данных
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="radiochastotnye-koaksialnye-kabeli"
+                       style={{backgroundImage: 'url(src/photos/products/радиочастотные-коаксиальные-кабели.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Радиочастотные коаксиальные кабели
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="provoda-ustanovochnye"
+                       style={{backgroundImage: 'url(src/photos/products/провода-установочные.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Провода установочные (монтажные)
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
 
                     <a className="product-container" href="obmotochnye-provoda"
                        style={{backgroundImage: 'url(src/photos/products/обмоточные-провода.png)',
@@ -142,6 +180,19 @@ function MainPage(){
                         </div>
                     </a>
 
+                    <a className="product-container" href="provoda-vodopogruzhnye"
+                       style={{backgroundImage: 'url(src/photos/products/провода-водопогружные.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Провода водопогружные
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
                     <a className="product-container" href="provoda-silovye"
                        style={{backgroundImage: 'url(src/photos/products/провода-силовые.png)',
                            backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
@@ -155,6 +206,109 @@ function MainPage(){
                         </div>
                     </a>
 
+                    <a className="product-container" href="provoda-vozdushnyh-linij-ehlektroperedach"
+                       style={{backgroundImage: 'url(src/photos/products/провода-для-воздушных-линий-электропередач.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Провода воздушных линий электропередач
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="provoda-bytovye"
+                       style={{backgroundImage: 'url(src/photos/products/провода-бытовые.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Провода бытовые
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="provoda-bortovye-aviacionnye"
+                       style={{backgroundImage: 'url(src/photos/products/провода-бортовые-авиационные.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Провода бортовые авиационные
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="neizolirovannye-provoda"
+                       style={{backgroundImage: 'url(src/photos/products/неизолированные-провода.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Провода неизолированные
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="transformatory"
+                       style={{backgroundImage: 'url(src/photos/products/трансформаторы.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Трансформаторы
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="osveshchenie"
+                       style={{backgroundImage: 'url(src/photos/products/освещение.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Освещение
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="truby-kabel-kanaly"
+                       style={{backgroundImage: 'url(src/photos/products/трубы-кабель-каналы.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Трубы, кабель-каналы
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a className="product-container" href="kabelnye-mufty-i-nakonechniki"
+                       style={{backgroundImage: 'url(src/photos/products/кабельные-муфты-и-наконечники.png)',
+                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <div className="product-background">
+                            <div className="product-content">
+                                <div className="product-name">
+                                    Кабельные муфты и наконечники
+                                </div>
+                                <img src={goTo} className="goto-img" alt="goto"/>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div className="order-section">

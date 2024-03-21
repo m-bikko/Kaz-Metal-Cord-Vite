@@ -12,9 +12,17 @@
     transition: 0.3s all ease;
 }
 
-.add-file-button:hover {
-    background-color: #6D2CC1;
-    color: #fff;
+@media (hover: hover) {
+    .add-file-button:hover {
+        background-color: #6D2CC1;
+        color: #fff;
+    }
+}
+@media (hover: none) {
+    .add-file-button:active {
+        background-color: #6D2CC1;
+        color: #fff;
+    }
 }
 
 .file-uploader ul {

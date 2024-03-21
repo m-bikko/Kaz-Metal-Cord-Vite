@@ -49,9 +49,17 @@
     font-weight: 500;
 }
 
-.detail:hover {
-    background-color: #6D2CC1;
-    color: #fff;
+@media (hover: hover) {
+    .detail:hover {
+        background-color: #6D2CC1;
+        color: #fff;
+    }
+}
+@media (hover: none) {
+    .detail:active {
+        background-color: #6D2CC1;
+        color: #fff;
+    }
 }
 
 .buy {

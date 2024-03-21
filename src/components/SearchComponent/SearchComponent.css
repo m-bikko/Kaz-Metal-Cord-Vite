@@ -1,0 +1,12 @@
+.search-comp {
+    width: 100%;
+    margin-top: 40px;
+}
+.search-card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-card-container>div {
+    width: 23%;
+}

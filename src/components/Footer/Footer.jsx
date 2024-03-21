@@ -17,7 +17,7 @@ function Footer(){
                         <a className={`footer-link`} href={''}>Главная</a>
                     </div>
                     <div>
-                        <a className={`footer-link`} href={'#catalog'}>Каталог</a>
+                        <a className={`footer-link`} href={'/#catalog'}>Каталог</a>
                     </div>
                     <div>
                         <a className={`footer-link`} href={'dostavka'}>Условия доставки</a>
