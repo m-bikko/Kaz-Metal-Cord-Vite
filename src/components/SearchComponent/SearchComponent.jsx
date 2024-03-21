@@ -72,7 +72,7 @@ const SearchComponent = () => {
                         productId={item.productId}
                         name={item.name}
                         description={item.description}
-                        image={obj[item.category] ?? default_image}
+                        image={obj[item.category] || default_image}
                         price={item.price}
                     />
                 ))}

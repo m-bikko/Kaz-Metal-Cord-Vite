@@ -63,7 +63,7 @@ function Nav({onEnterPressed}){
     };
 
     const handleKeyPress = (event) => {
-        if (event.key === "Enter") {
+        if (event.key === "Enter" && event.target.value !== '') {
             onEnterPressed(searchTerm);
         }
     };
