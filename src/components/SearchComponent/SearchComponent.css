@@ -10,3 +10,12 @@
 .search-card-container>div {
     width: 23%;
 }
+.null {
+    width: 100%;
+    padding: 50px;
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 500;
+    /*border: 1px solid black;*/
+    text-align: center;
+}

@@ -60,11 +60,21 @@ const SearchComponent = () => {
         "Металлорукав" : metalorukav
     }
 
+    if(searchResults.length === 0) {
+        return <div className={`null`}>Не найдено</div>
+    }
     return (
         <div className='search-comp'>
             <div className='search-card-container'>
                 {searchResults.slice(0, visibleCards).map((item) => (
-                    <Card key={item.productId} productId={item.productId} name={item.name} description={item.description} image={obj[item.category] ?? default_image} price={item.price}/>
+                    <Card
+                        key={item.productId}
+                        productId={item.productId}
+                        name={item.name}
+                        description={item.description}
+                        image={obj[item.category] ?? default_image}
+                        price={item.price}
+                    />
                 ))}
             </div>
             {
