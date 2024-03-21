@@ -1,9 +1,6 @@
 import React, {useEffect, useState} from "react";
 import './CardLoader.css';
 import Card from "../Card/Card.jsx";
-import truba from "../../photos/products/трубы-кабель-каналы.png";
-import truba_gofra from "../../photos/products/труба-гофра.png";
-import metalorukav from "../../photos/products/металлорукав.png";
 
 const CardLoader = ({selectedData, cardData, cardImage}) => {
     const [visibleCards, setVisibleCards] = useState(6);

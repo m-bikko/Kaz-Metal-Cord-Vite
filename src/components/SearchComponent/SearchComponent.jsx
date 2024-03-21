@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {useParams} from "react-router-dom";
 import './SearchComponent.css'
 import Card from "../Card/Card";
 import jsonData from "../Shared/for-search-all-products.json";
@@ -19,18 +20,19 @@ import truba_gofra from '../../photos/products/труба-гофра.png'
 import metalorukav from '../../photos/products/металлорукав.png'
 
 
-const SearchComponent = ({ searchTerm }) => {
+const SearchComponent = () => {
 
-    const [visibleCards, setVisibleCards] = useState(6);
-
+    const searchTerm = useParams();
 
     const searchResults = jsonData.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        item.name.toLowerCase().includes(searchTerm.searchTerm.toLowerCase())
     );
+
+    const [visibleCards, setVisibleCards] = useState(16)
 
     const handleLoadMore = () => {
         if(searchResults.length > visibleCards + 6){
-            setVisibleCards(prevVisibleItems => prevVisibleItems + 6);
+            setVisibleCards(prevVisibleItems => prevVisibleItems + 8);
         }
         else {
             setVisibleCards(prevVisibleItems => prevVisibleItems + (searchResults.length - prevVisibleItems));
@@ -57,9 +59,8 @@ const SearchComponent = ({ searchTerm }) => {
         "Металлорукав" : metalorukav
     }
 
-    if (!searchTerm) {
-        return <></>;
-    }
+
+
     return (
         <div className='search-comp'>
             <div className='search-card-container'>

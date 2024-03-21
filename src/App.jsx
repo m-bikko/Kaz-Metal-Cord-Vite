@@ -53,6 +53,8 @@ function App() {
                 <Route path="transformatory" element={<TransformatoryPage/>}/>
                 <Route path="truby-kabel-kanaly" element={<TrubyKabelKanalyPage/>}/>
 
+                <Route path="search/:searchTerm" element={<SearchComponent/>}/>
+
                 <Route path="dostavka" element={<DeliveryPage/>}/>
                 <Route path="contacts" element={<Contacts/>}/>
                 <Route path="kak-kupit" element={<HowToBuyPage/>}/>
