@@ -8,7 +8,7 @@ function Layout() {
     const navigate = useNavigate();
     const handleEnterPressed = (term) => {
         setSearchTerm(term);
-        navigate(`/search/${term}`)
+        navigate(`/search/${searchTerm}`)
     };
 
     return (

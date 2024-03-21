@@ -18,6 +18,7 @@ import soedinitelnye_provoda from '../../photos/products/соединитель�
 import truba from '../../photos/products/трубы-кабель-каналы.png'
 import truba_gofra from '../../photos/products/труба-гофра.png'
 import metalorukav from '../../photos/products/металлорукав.png'
+import default_image from '../../photos/products/все-в-одном.png'
 
 
 const SearchComponent = () => {
@@ -59,13 +60,11 @@ const SearchComponent = () => {
         "Металлорукав" : metalorukav
     }
 
-
-
     return (
         <div className='search-comp'>
             <div className='search-card-container'>
                 {searchResults.slice(0, visibleCards).map((item) => (
-                    <Card key={item.productId} productId={item.productId} name={item.name} description={item.description} image={obj[item.category]} price={item.price}/>
+                    <Card key={item.productId} productId={item.productId} name={item.name} description={item.description} image={obj[item.category] ?? default_image} price={item.price}/>
                 ))}
             </div>
             {
