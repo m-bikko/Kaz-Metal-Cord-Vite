@@ -5,6 +5,7 @@ import aboutBenefitsBodyContainerFirst from "../../photos/about-benefits-body-co
 import aboutBenefitsBodyContainerSecond from "../../photos/about-benefits-body-container-second.png";
 import aboutBenefitsBodyContainerThird from "../../photos/about-benefits-body-container-third.png";
 import goTo from "../../photos/goto.png";
+import NotFound from "../../components/NotFound/NotFound";
 
 
 function MainPage(){
@@ -310,37 +311,7 @@ function MainPage(){
                     </a>
                 </div>
             </div>
-            <div className="order-section">
-                <div className="m-lr80-1 order-section-wrapper">
-                    <div className="order-section-main-txt">
-                        Закажите бесплатную консультацию
-                    </div>
-                    <div className="order-section-description-txt">
-                        Для получения коммерческого предложения оставьте свои контактные данные. Наши менеджеры на связи
-                        по будням с 9:00 до 18:00, время ответа - до 30 минут.
-                    </div>
-                    <div className="order-section-inputs">
-                        <input className="order-input" type="text" placeholder="Ваше имя"/>
-                        <input className="order-input" type="text" placeholder="+7 (***) *** ** ** "/>
-                        <input className="order-input" type="text" placeholder="Сообщение"/>
-                    </div>
-                    <div className="order-section-take-file">
-                        Прикрепить файл
-                    </div>
-                    <div className="order-section-submit-info">
-                        Заявка или карточка компании в формате txt, doc, pdf (максимум 10 файлов)
-                    </div>
-                    <div className="order-section-send-btn-group">
-                        <div className="order-section-send-btn">
-                            Отправить заявку
-                        </div>
-                        <div className="order-section-send-policy">
-                            Нажимая кнопку, Вы соглашаетесь с <a href="#" className="policy-link">Политикой обработки
-                            персональных данных</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <NotFound/>
         </>
     )
 }

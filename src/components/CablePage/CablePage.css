@@ -123,4 +123,8 @@ button {
         margin-top: 0;
         font-size: 16px;
     }
+    .remove-card {
+        margin: 0;
+        padding: 0;
+    }
 }
