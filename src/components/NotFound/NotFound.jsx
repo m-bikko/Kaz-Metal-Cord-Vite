@@ -27,7 +27,7 @@ const NotFound = ({useBasketStyles}) => {
         const formData = new FormData();
 
 
-        formData.append('to', 'abdulazizbolat4@gmail.com'); // Set the recipient's email address as a constant
+        formData.append('to', 'kazmetalcordkz@gmail.com'); // Set the recipient's email address as a constant
         formData.append('subject', `Request from ${clientName}`); // Set the subject line to include the client's name
         formData.append('text', messageContent); // Append the constructed message content
 
