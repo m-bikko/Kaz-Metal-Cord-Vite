@@ -78,7 +78,7 @@ const NotFound = ({useBasketStyles}) => {
                 <div className={`upload-container`}>
                     {/*<input name='files' type="file"/>*/}
                     <FileUploader />
-                    <p>Заявка или карточка компании в формате txt, doc, pdf (максимум 10 файлов)</p>
+                    <p>Заявка или карточка компании в формате txt, doc, pdf (максимум 4 МБ)</p>
                 </div>
 
                 <div className={sendContainerStyle}>

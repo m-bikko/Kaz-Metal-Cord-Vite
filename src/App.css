@@ -695,6 +695,15 @@ footer > div > *{
 
 }
 @media only screen and (max-width: 1200px) {
+    .order-section-main-txt {
+        font-size: 2.7rem;
+    }
+    .order-section-description-txt {
+        font-size: 1.3rem;
+    }
+    .about-benefits-body-container-text{
+        font-size: 20px;
+    }
     .product-container {
         position: relative;
         width: 22%;
@@ -702,7 +711,7 @@ footer > div > *{
         height: 30vw;
         overflow: hidden;
         text-decoration: none;
-        border-radius: 20px;
+        border-radius: 5px;
         margin: 1.5%;
     }
     .product-name{
@@ -810,7 +819,7 @@ footer > div > *{
     .order-section-inputs > input {
         font-size: 16px;
         max-width: 100%;
-        width: 80%;
+        width: 100%;
         margin: 15px 0;
     }
     .order-section-description-txt{
