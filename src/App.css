@@ -476,14 +476,14 @@ desktop-nav{
 .products{
     display: flex;
     flex-wrap: wrap;
-    /*justify-content: center;*/
+    justify-content: center;
     width: 100%;
 }
 .product-container {
     position: relative;
-    width: 21%;
-    min-width: 300px;
-    height: 300px;
+    width: 22%;
+    min-width: 15vw;
+    height: 15vw;
     overflow: hidden;
     text-decoration: none;
     border-radius: 20px;
@@ -508,15 +508,17 @@ desktop-nav{
 }
 
 .product-content {
+    max-width: 100%;
     width: 100%;
     color: #fff;
     position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 20px;
     gap: 5%;
-    top: 55%;
+    bottom: -41%;
 }
 
 .product-name {
@@ -676,8 +678,37 @@ footer > div > *{
 .adress-txt > div{
     min-width: 200px;
 }
+@media only screen and (max-width: 1500px) {
+    .product-name{
+        font-size: 24px;
+    }
+    .goto-img{
+        width: 16px;
+        height: 16px;
+    }
+    .product-content {
+        bottom: -61%;
+    }
 
+}
 @media only screen and (max-width: 1200px) {
+    .product-container {
+        position: relative;
+        width: 22%;
+        min-width: 35vw;
+        height: 30vw;
+        overflow: hidden;
+        text-decoration: none;
+        border-radius: 20px;
+        margin: 1.5%;
+    }
+    .product-name{
+        font-size: 24px;
+    }
+    .goto-img{
+        width: 14px;
+        height: 14px;
+    }
     .footer-logo{
         display: flex;
         justify-content: space-between;
@@ -707,6 +738,16 @@ footer > div > *{
     }
 }
 @media only screen and (max-width: 950px) {
+    .product-content {
+        bottom: -51%;
+    }
+    .product-name{
+        font-size: 20px;
+    }
+    .goto-img{
+        width: 14px;
+        height: 14px;
+    }
     .intro-img{
         margin-top: 0;
     }
@@ -821,6 +862,17 @@ footer > div > *{
     }
 }
 @media only screen and (max-width: 700px) {
+
+    .product-container {
+        min-width: 32vw;
+    }
+    .product-name{
+        font-size: 14px;
+    }
+    .product-content {
+        padding: 7px;
+        bottom: -50%;
+    }
     .intro-img-divs{
         margin: 0 30px 30px 30px;
     }

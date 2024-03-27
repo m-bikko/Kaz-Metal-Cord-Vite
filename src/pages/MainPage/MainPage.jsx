@@ -5,7 +5,6 @@ import aboutBenefitsBodyContainerFirst from "../../photos/about-benefits-body-co
 import aboutBenefitsBodyContainerSecond from "../../photos/about-benefits-body-container-second.png";
 import aboutBenefitsBodyContainerThird from "../../photos/about-benefits-body-container-third.png";
 import goTo from "../../photos/goto.png";
-import kabeli_kontrolnie from '../../photos/products/КабелиКонтрольные.png'
 
 
 function MainPage(){
