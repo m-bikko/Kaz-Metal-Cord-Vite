@@ -454,7 +454,7 @@ desktop-nav{
     background-color: #DFF6FF;
 }
 .kabeli-silovye{
-    background-image: url('src/photos/products/кабели-силовые.png');
+    background-image: url("src/photos/products/кабели-силовые.png");
 }
 .about-benefits-body-container-second{
     width: 33%;
