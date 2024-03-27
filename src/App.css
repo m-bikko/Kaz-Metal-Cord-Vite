@@ -453,6 +453,9 @@ desktop-nav{
     height: 300px;
     background-color: #DFF6FF;
 }
+.kabeli-silovye{
+    background-image: url('src/photos/products/кабели-силовые.png');
+}
 .about-benefits-body-container-second{
     width: 33%;
     height: 275px;
@@ -844,7 +847,6 @@ footer > div > *{
     .products-container{
         width: 45%;
         height: 150px;
-        background-image: url("./photos/products/КабелиСиловые.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

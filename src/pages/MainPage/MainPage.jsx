@@ -76,8 +76,8 @@ function MainPage(){
                 </div>
                 <div className="products">
 
-                    <a className="product-container" href="kabeli-silovye"
-                       style={{backgroundImage: 'url(src/photos/products/кабели-силовые.png)',
+                    <a className="product-container kabeli-silovye" href="kabeli-silovye"
+                       style={{
                            backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'contain'}}>
                         <div className="product-background">
                             <div className="product-content">
