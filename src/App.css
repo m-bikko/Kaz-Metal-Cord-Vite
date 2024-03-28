@@ -474,14 +474,14 @@ desktop-nav{
 
 
 .products{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
 }
 .product-container {
     position: relative;
     width: 22%;
-    min-width: 15vw;
+    /*min-width: 10vw;*/
     height: 15vw;
     overflow: hidden;
     text-decoration: none;
@@ -490,6 +490,19 @@ desktop-nav{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+@media only screen and (max-width: 1200px) {
+    .product-container {
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .product-container {
+        width: 47%;
+    }
+    .product-name {
+        font-size: 14px;
+    }
 }
 
 .kabeli-silovye{
@@ -579,7 +592,7 @@ desktop-nav{
     justify-content: space-between;
     padding: 20px;
     gap: 5%;
-    bottom: -41%;
+    /*bottom: -41%;*/
 }
 
 .product-name {
@@ -747,9 +760,9 @@ footer > div > *{
         width: 16px;
         height: 16px;
     }
-    .product-content {
-        bottom: -61%;
-    }
+    /*.product-content {*/
+    /*    bottom: -61%;*/
+    /*}*/
 
 }
 @media only screen and (max-width: 1200px) {
@@ -761,16 +774,6 @@ footer > div > *{
     }
     .about-benefits-body-container-text{
         font-size: 20px;
-    }
-    .product-container {
-        position: relative;
-        width: 22%;
-        min-width: 35vw;
-        height: 30vw;
-        overflow: hidden;
-        text-decoration: none;
-        border-radius: 5px;
-        margin: 1.5%;
     }
     .product-name{
         font-size: 24px;
@@ -808,9 +811,9 @@ footer > div > *{
     }
 }
 @media only screen and (max-width: 950px) {
-    .product-content {
-        bottom: -51%;
-    }
+    /*.product-content {*/
+    /*    bottom: -51%;*/
+    /*}*/
     .product-name{
         font-size: 20px;
     }
@@ -931,16 +934,8 @@ footer > div > *{
     }
 }
 @media only screen and (max-width: 700px) {
-
-    .product-container {
-        min-width: 32vw;
-    }
     .product-name{
         font-size: 14px;
-    }
-    .product-content {
-        padding: 7px;
-        bottom: -50%;
     }
     .intro-img-divs{
         margin: 0 30px 30px 30px;
