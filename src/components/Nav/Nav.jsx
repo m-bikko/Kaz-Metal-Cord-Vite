@@ -67,19 +67,45 @@ function Nav({onEnterPressed}){
             onEnterPressed(searchTerm);
         }
     };
+// State variables for controlling visibility
+    const [isSearchVisible, setIsSearchVisible] = useState(false);
+
+    // Function to toggle search and logo visibility
+    const toggleSearchVisibility = () => {
+        setIsSearchVisible(!isSearchVisible);
+    };
 
     return(
 
         <>
             <nav className="responsive-nav">
-                <div className="responsive-nav-upper" style={{ backgroundColor: navUnderClass.includes("hide") ? "#ffffff" : "#6D2CC1" }}>
+                <div className="responsive-nav-upper"
+                     style={{backgroundColor: navUnderClass.includes("hide") ? "#ffffff" : "#6D2CC1"}}>
                     <div className="container" onClick={toggleNav}>
-                        <div className="bar1" style={{ backgroundColor: navUnderClass.includes("hide") ? "#333" : "white" }}></div>
-                        <div className="bar2" style={{ backgroundColor: navUnderClass.includes("hide") ? "#333" : "white" }}></div>
-                        <div className="bar3" style={{ backgroundColor: navUnderClass.includes("hide") ? "#333" : "white" }}></div>
+                        <div className="bar1"
+                             style={{backgroundColor: navUnderClass.includes("hide") ? "#333" : "white"}}></div>
+                        <div className="bar2"
+                             style={{backgroundColor: navUnderClass.includes("hide") ? "#333" : "white"}}></div>
+                        <div className="bar3"
+                             style={{backgroundColor: navUnderClass.includes("hide") ? "#333" : "white"}}></div>
                     </div>
-                    <img className="logo" src={logo} alt="logo"/>
-                    <img className="search-res" src={searchIcon} alt="" style={{ width: navUnderClass.includes("hide") ? "60px" : "30px", height: navUnderClass.includes("hide") ? "60px" : "30px" }}/>
+                    <fieldset className="responsive-nav-search field-container"
+                              style={{display: isSearchVisible ? 'block' : 'none'}}>
+                        <input type="text" placeholder="Поиск" className="field" value={searchTerm}
+                               onChange={handleChange} onKeyPress={handleKeyPress}/>
+                        <div className="icons-container" onClick={handleCleanChange}>
+                            <div className="icon-search"></div>
+                            <div className="icon-close">
+                                <div className="x-up"></div>
+                                <div className="x-down"></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <Link to={``} style={{ display: isSearchVisible ? 'none' : 'block' }}>
+                        <img className="logo" src={imgLogo} alt="logo" />
+                    </Link>
+                    <img className="search-res" src={searchIcon} alt="" style={{ width: navUnderClass.includes("hide") ? "60px" : "30px", height: navUnderClass.includes("hide") ? "60px" : "30px" }} onClick={toggleSearchVisibility} />
+
                 </div>
                 <div className={navUnderClass}>
                     {/* Content goes here */}
@@ -118,13 +144,16 @@ function Nav({onEnterPressed}){
                     </div>
                     <div>
                         <div>
-                            г. Алматы, Жибек Жолы 135
+                            г.Астана, район Нура
                         </div>
                         <div>
-                            + 7 (727) 312-26-02
+                            улица Култегин, дом 19/1, кв. 362
                         </div>
                         <div>
-                            zakaz@cablelines.kz
+                            + 7 (xxx) xxx-xx-xx
+                        </div>
+                        <div>
+                            kazmetalcordkz@gmail.com
                         </div>
                     </div>
                     <div>
@@ -152,13 +181,16 @@ function Nav({onEnterPressed}){
                     </fieldset>
                     <div>
                         <div>
-                            г. Алматы, Жибек Жолы 135
+                            г.Астана, район Нура
                         </div>
                         <div>
-                            + 7 (727) 312-26-02
+                            улица Култегин, дом 19/1, кв. 362
                         </div>
                         <div>
-                            zakaz@cablelines.kz
+                            + 7 (xxx) xxx-xx-xx
+                        </div>
+                        <div>
+                            kazmetalcordkz@gmail.com
                         </div>
                     </div>
                     <div className="nav-top-btn">

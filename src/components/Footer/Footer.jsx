@@ -2,6 +2,8 @@ import '../../App.css'
 import '../../scripts.js'
 import imgLogo from '../../photos/img_white.png';
 import compass from "../../photos/compass.png";
+import React from "react";
+// import {a} from "react-router-dom";
 
 function Footer(){
     return(
@@ -13,7 +15,7 @@ function Footer(){
                 </div>
                 <div>
                     <div>
-                        <a className={`footer-link`} href={'/'}>Главная</a>
+                        <a className={`footer-link`} href={''}>Главная</a>
                     </div>
                     <div>
                         <a className={`footer-link`} href={'/#catalog'}>Каталог</a>
@@ -85,7 +87,10 @@ function Footer(){
                         <img src={compass} alt=""/>
                         <div className="adress-txt">
                             <div>
-                                г. Алматы, Жибек Жолы 135
+                                г.Астана, район Нура
+                            </div>
+                            <div>
+                                улица Култегин, дом 19/1, кв. 362
                             </div>
                             <div>
                                 + 7 (727) 312-26-02
