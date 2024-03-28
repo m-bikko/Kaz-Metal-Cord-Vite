@@ -77,9 +77,7 @@ function MainPage(){
                 </div>
                 <div className="products">
 
-                    <a className="product-container kabeli-silovye" href="kabeli-silovye"
-                       style={{
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'contain'}}>
+                    <a className="product-container kabeli-silovye" href="kabeli-silovye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -90,9 +88,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="kabeli-kontrolnie"
-                       style={{backgroundImage: 'url(src/photos/products/кабели-контрольные.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container kabeli-kontrolnie" href="kabeli-kontrolnie">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -103,9 +99,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="kabeli-montazhnye"
-                       style={{backgroundImage: 'url(src/photos/products/кабели-монтажные.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container kabeli-montazhnye" href="kabeli-montazhnye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -115,9 +109,7 @@ function MainPage(){
                             </div>
                         </div>
                     </a>
-                    <a className="product-container" href="kabeli-peredachi-dannyh"
-                       style={{backgroundImage: 'url(src/photos/products/кабели-передачи-данных.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container kabeli-peredachi-dannyh" href="kabeli-peredachi-dannyh">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -128,9 +120,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="radiochastotnye-koaksialnye-kabeli"
-                       style={{backgroundImage: 'url(src/photos/products/радиочастотные-коаксиальные-кабели.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container radiochastotnye-koaksialnye-kabeli" href="radiochastotnye-koaksialnye-kabeli">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -141,9 +131,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="provoda-ustanovochnye"
-                       style={{backgroundImage: 'url(src/photos/products/провода-установочные.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container provoda-ustanovochnye" href="provoda-ustanovochnye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -154,9 +142,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="obmotochnye-provoda"
-                       style={{backgroundImage: 'url(src/photos/products/обмоточные-провода.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container obmotochnye-provoda" href="obmotochnye-provoda">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -167,9 +153,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="soedinitelnye-provoda"
-                       style={{backgroundImage: 'url(src/photos/products/соединительные-провода.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container soedinitelnye-provoda" href="soedinitelnye-provoda">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -180,9 +164,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="provoda-vodopogruzhnye"
-                       style={{backgroundImage: 'url(src/photos/products/провода-водопогружные.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container provoda-vodopogruzhnye" href="provoda-vodopogruzhnye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -193,9 +175,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="provoda-silovye"
-                       style={{backgroundImage: 'url(src/photos/products/провода-силовые.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container provoda-silovye" href="provoda-silovye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -206,9 +186,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="provoda-vozdushnyh-linij-ehlektroperedach"
-                       style={{backgroundImage: 'url(src/photos/products/провода-для-воздушных-линий-электропередач.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container provoda-vozdushnyh-linij-ehlektroperedach" href="provoda-vozdushnyh-linij-ehlektroperedach">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -219,9 +197,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="provoda-bytovye"
-                       style={{backgroundImage: 'url(src/photos/products/провода-бытовые.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container provoda-bytovye" href="provoda-bytovye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -232,9 +208,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="provoda-bortovye-aviacionnye"
-                       style={{backgroundImage: 'url(src/photos/products/провода-бортовые-авиационные.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container provoda-bortovye-aviacionnye" href="provoda-bortovye-aviacionnye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -245,9 +219,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="neizolirovannye-provoda"
-                       style={{backgroundImage: 'url(src/photos/products/неизолированные-провода.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container neizolirovannye-provoda" href="neizolirovannye-provoda">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -258,9 +230,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="transformatory"
-                       style={{backgroundImage: 'url(src/photos/products/трансформаторы.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container transformatory" href="transformatory">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -271,9 +241,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="osveshchenie"
-                       style={{backgroundImage: 'url(src/photos/products/освещение.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container osveshchenie" href="osveshchenie">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -284,9 +252,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="truby-kabel-kanaly"
-                       style={{backgroundImage: 'url(src/photos/products/трубы-кабель-каналы.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container truby-kabel-kanaly" href="truby-kabel-kanaly">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -297,9 +263,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container" href="kabelnye-mufty-i-nakonechniki"
-                       style={{backgroundImage: 'url(src/photos/products/кабельные-муфты-и-наконечники.png)',
-                           backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                    <a className="product-container kabelnye-mufty-i-nakonechniki" href="kabelnye-mufty-i-nakonechniki">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">

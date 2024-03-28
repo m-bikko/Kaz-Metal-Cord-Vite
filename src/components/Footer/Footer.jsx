@@ -2,7 +2,6 @@ import '../../App.css'
 import '../../scripts.js'
 import imgLogo from '../../photos/img_white.png';
 import compass from "../../photos/compass.png";
-// import {a} from "react-router-dom";
 
 function Footer(){
     return(
@@ -14,7 +13,7 @@ function Footer(){
                 </div>
                 <div>
                     <div>
-                        <a className={`footer-link`} href={''}>Главная</a>
+                        <a className={`footer-link`} href={'/'}>Главная</a>
                     </div>
                     <div>
                         <a className={`footer-link`} href={'/#catalog'}>Каталог</a>
