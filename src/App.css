@@ -482,7 +482,7 @@ desktop-nav{
     position: relative;
     width: 22%;
     /*min-width: 10vw;*/
-    height: 15vw;
+    height: 30vh;
     overflow: hidden;
     text-decoration: none;
     border-radius: 20px;
@@ -490,7 +490,51 @@ desktop-nav{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: flex;
 }
+
+
+.product-background {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.product-background::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+}
+
+.product-content {
+    max-width: 100%;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 5%;
+    margin-top: auto;
+}
+
+.product-name {
+    font-size: 28px;
+}
+.goto-img {
+    width: 20px;
+    height: 20px;
+}
+
 @media only screen and (max-width: 1200px) {
     .product-container {
         width: 30%;
@@ -499,6 +543,7 @@ desktop-nav{
 @media only screen and (max-width: 768px){
     .product-container {
         width: 47%;
+        height: 20vh;
     }
     .product-name {
         font-size: 14px;
@@ -513,7 +558,7 @@ desktop-nav{
     background-image: url("src/photos/products/кабели-контрольные.png");
 }
 .kabeli-montazhnye {
-    background-image: url("src/photos/products/кабели-монтажные.png");
+    background-image: url("https://optim.tildacdn.com/stor3436-6132-4863-b530-383465383865/-/resize/400x400/-/format/webp/75737810.png");
 }
 .kabeli-peredachi-dannyh {
     background-image: url("src/photos/products/кабели-передачи-данных.png");
@@ -559,48 +604,6 @@ desktop-nav{
 }
 .kabelnye-mufty-i-nakonechniki {
     background-image: url("src/photos/products/кабельные-муфты-и-наконечники.png");
-}
-
-
-
-
-.product-background {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
-
-.product-background::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 20px;
-}
-
-.product-content {
-    max-width: 100%;
-    width: 100%;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 5%;
-    /*bottom: -41%;*/
-}
-
-.product-name {
-    font-size: 28px;
-}
-.goto-img {
-    width: 20px;
-    height: 20px;
 }
 
 
