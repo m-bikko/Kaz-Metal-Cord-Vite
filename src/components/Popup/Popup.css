@@ -62,7 +62,6 @@
 @media only screen and (max-width: 768px) {
     .popup-content {
         width: 100%;
-        height: 100%;
     }
     .close-link{
         position: absolute;
