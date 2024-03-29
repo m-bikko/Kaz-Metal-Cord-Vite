@@ -510,9 +510,11 @@ desktop-nav{
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 20px;
+    border-radius: 5px;
 }
-
+.responsive-nav-search{
+    display: none;
+}
 .product-content {
     max-width: 100%;
     width: 100%;
@@ -938,7 +940,7 @@ footer > div > *{
 }
 @media only screen and (max-width: 700px) {
     .product-name{
-        font-size: 14px;
+        font-size: 12px;
     }
     .intro-img-divs{
         margin: 0 30px 30px 30px;
