@@ -23,7 +23,10 @@ const NotFound = ({useBasketStyles}) => {
         const clientPhone = form.current['from_tel'].value;
         const clientMessage = form.current['message'].value;
 
-        const messageContent = `name: ${clientName}\nphone: ${clientPhone}\nmessage: ${clientMessage}`;
+        const basketData = JSON.parse(localStorage.getItem('storedCard')) || [];
+        const messageContent = `basket:\n${basketData.map(item => {
+            return `${item.name} | ${item.quantity} штук`;
+        }).join('\n')}\n\nname: ${clientName}\nphone: ${clientPhone}\nmessage: ${clientMessage}`;
         const formData = new FormData();
 
 
