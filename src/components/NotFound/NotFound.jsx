@@ -1,11 +1,13 @@
-import React, { useRef } from 'react';
+import React, {useRef, useState} from 'react';
 import './NotFound.css';
 import {Link} from "react-router-dom";
 import InputMask from 'react-input-mask';
 import emailjs from '@emailjs/browser';
 import FileUploader from "../FileUploader/FileUploader.jsx";
+import fileUploader from "../FileUploader/FileUploader.jsx";
 
 const NotFound = ({useBasketStyles}) => {
+
     const handleInput = (e) =>{
         return e.target.value
     }
@@ -16,6 +18,19 @@ const NotFound = ({useBasketStyles}) => {
     const sendContainerStyle = useBasketStyles ? 'send-request-container-basket' : 'send-request-container'
 
     const form = useRef();
+
+    const [clearFiles, setClearFiles] = useState(false);
+    const [inputMaskContent, setInputMaskContent] = useState('');
+
+    const handleSendButton = () => {
+        form.current['from_name'].value = ''
+        form.current['from_tel'].value = ''
+        form.current['message'].value = ''
+        setInputMaskContent('')
+        localStorage.removeItem('storedCard');
+        setClearFiles(true);
+        window.location.reload();
+    }
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -29,7 +44,6 @@ const NotFound = ({useBasketStyles}) => {
         }).join('\n')}\n\nname: ${clientName}\nphone: ${clientPhone}\nmessage: ${clientMessage}`;
         const formData = new FormData();
 
-
         formData.append('to', 'kazmetalcordkz@gmail.com'); // Set the recipient's email address as a constant
         formData.append('subject', `Request from ${clientName}`); // Set the subject line to include the client's name
         formData.append('text', messageContent); // Append the constructed message content
@@ -41,7 +55,6 @@ const NotFound = ({useBasketStyles}) => {
                 formData.append('files', fileInput.files[i]);
             }
         }
-
 
         fetch('https://send-email-with-file.vercel.app/send', {
             method: 'POST',
@@ -59,6 +72,7 @@ const NotFound = ({useBasketStyles}) => {
             .catch((error) => {
                 console.log('FAILED...', error.message);
             });
+
     };
 
 
@@ -73,19 +87,34 @@ const NotFound = ({useBasketStyles}) => {
                     </>
                 )}
                 <div className={inputInfoStyle}>
-                    <input name={`from_name`} placeholder="Ваше имя" onChange={handleInput}/>
-                    <InputMask name={`from_tel`} mask="+7 (999) 999-99-99" maskChar="*" placeholder="+7 (***) *** ** **"  onChange={handleInput}/>
-                    <input name={`message`} placeholder="Сообщение" onChange={handleInput}/>
+                    <input
+                        name={`from_name`}
+                        placeholder="Ваше имя"
+                        onChange={handleInput}
+                    />
+                    <InputMask
+                        name={`from_tel`}
+                        mask="+7 (999) 999 99 99"
+                        maskChar="*"
+                        placeholder="+7 (***) *** ** **"
+                        value={inputMaskContent}
+                        onChange={(e) => setInputMaskContent(e.target.value)}
+                    />
+                    <input
+                        name={`message`}
+                        placeholder="Сообщение"
+                        onChange={handleInput}
+                    />
                 </div>
 
                 <div className={`upload-container`}>
                     {/*<input name='files' type="file"/>*/}
-                    <FileUploader />
+                    <FileUploader clearFiles={clearFiles} setClearFiles={setClearFiles}/>
                     <p>Заявка или карточка компании в формате txt, doc, pdf (максимум 4 МБ)</p>
                 </div>
 
                 <div className={sendContainerStyle}>
-                    <button type={`submit`} className={`send-button`}>Отправить заявку</button>
+                    <button type={`submit`} onClick={handleSendButton} className={`send-button`}>Отправить заявку</button>
                     <p>Нажимая кнопку, Вы соглашаетесь с <Link className={`link`} to={`policy`}>Политикой обработки персональных данных</Link></p>
                 </div>
             </div>
