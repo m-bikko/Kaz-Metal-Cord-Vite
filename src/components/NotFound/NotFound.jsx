@@ -45,7 +45,7 @@ const NotFound = ({useBasketStyles}) => {
 
         fetch('https://send-email-with-file.vercel.app/send', {
             method: 'POST',
-            body: formData,
+            body: formData
         })
             .then(response => {
                 if (!response.ok) {

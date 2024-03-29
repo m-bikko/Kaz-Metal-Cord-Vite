@@ -28,6 +28,8 @@
 .file-uploader ul {
     /*display: flex;*/
     /*gap: 10px;*/
+    margin: 0;
+    padding: 0;
 }
 .file-uploader ul li {
     list-style: none;
