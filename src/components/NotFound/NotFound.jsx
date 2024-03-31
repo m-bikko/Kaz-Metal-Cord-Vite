@@ -21,8 +21,13 @@ const NotFound = ({useBasketStyles}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleSendButton = () => {
-        localStorage.removeItem('storedCard');
-        setIsOpen(true)
+        if(form.current['from_name'].value != '' &&
+            form.current['from_tel'].value != '' &&
+            form.current['message'].value != '')
+        {
+            localStorage.removeItem('storedCard');
+            setIsOpen(true)
+        }
     }
 
     const sendEmail = (e) => {
