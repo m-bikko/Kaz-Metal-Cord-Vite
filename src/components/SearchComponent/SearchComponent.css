@@ -6,9 +6,11 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .search-card-container>div {
     width: 23%;
+    min-width: 151px;
 }
 .null {
     width: 100%;
