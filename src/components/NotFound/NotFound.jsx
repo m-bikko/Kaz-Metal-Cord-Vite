@@ -19,6 +19,7 @@ const NotFound = ({useBasketStyles}) => {
     const form = useRef();
 
     const [isOpen, setIsOpen] = useState(false);
+    const [isOpenError, setIsOpenError] = useState(false);
 
     const handleSendButton = () => {
         if(form.current['from_name'].value != '' &&
@@ -27,6 +28,9 @@ const NotFound = ({useBasketStyles}) => {
         {
             localStorage.removeItem('storedCard');
             setIsOpen(true)
+        }
+        else {
+            setIsOpenError(true)
         }
     }
 
@@ -118,8 +122,11 @@ const NotFound = ({useBasketStyles}) => {
             <Popup isOpen={isOpen} setIsOpen={setIsOpen} isSuccess={true}>
                 <div className={`successPopup`}>
                     <img src={'https://cdn-icons-png.flaticon.com/512/4436/4436481.png'} alt={``}/>
-                    <p>Заявка успешна отправлена!</p>
+                    <p className={`submitted-text`}>Заявка успешна отправлена!</p>
                 </div>
+            </Popup>
+            <Popup isOpen={isOpenError} setIsOpen={setIsOpenError} isNotFilled={true}>
+                <p className={`submitted-text`}>Заполните все поля!</p>
             </Popup>
         </form>
     );

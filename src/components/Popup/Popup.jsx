@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import './Popup.css'
 
-const Popup = ({isOpen, setIsOpen, isSuccess, children}) => {
+const Popup = ({isOpen, setIsOpen, isSuccess, isNotFilled, children}) => {
 
     const handleCLose = () => {
         setIsOpen(false)
@@ -9,9 +9,12 @@ const Popup = ({isOpen, setIsOpen, isSuccess, children}) => {
             window.location.reload()
         }
     }
-    const styleBtnClose = isSuccess ? {display: 'none'} : {}
-    const stylePopupContent = isSuccess ? {width: '25vw', minWidth: '250px'} : {}
-    const stylePopup = isSuccess ? {justifyContent: 'center'} : {}
+
+    const styleBtnClose = isSuccess || isNotFilled ? {display: 'none'} : {}
+    const stylePopupContent = isSuccess || isNotFilled ? {width: '25vw', minWidth: '250px'} : {}
+    const stylePopup = isSuccess || isNotFilled ? {justifyContent: 'center'} : {}
+
+
 
     return (
         <div style={stylePopup} className={isOpen ? 'popup active' : 'popup'} onClick={handleCLose}>

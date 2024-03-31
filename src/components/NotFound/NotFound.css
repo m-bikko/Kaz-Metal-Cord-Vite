@@ -138,11 +138,11 @@
 .successPopup img {
     width: 100px;
     height: 100px;
+    margin-bottom: 50px;
 }
-.successPopup p {
+.submitted-text {
     font-size: 24px;
     font-weight: 500;
-    margin-top: 50px;
     text-align: center;
 }
 
