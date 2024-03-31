@@ -112,7 +112,7 @@ const NotFound = ({useBasketStyles}) => {
 
             <Popup isOpen={isOpen} setIsOpen={setIsOpen} isSuccess={true}>
                 <div className={`successPopup`}>
-                    <img width={100} height={100} alt={``} src={'https://cdn-icons-png.flaticon.com/512/4436/4436481.png'}/>
+                    <img src={'https://cdn-icons-png.flaticon.com/512/4436/4436481.png'} alt={``}/>
                     <p>Заявка успешна отправлена!</p>
                 </div>
             </Popup>
