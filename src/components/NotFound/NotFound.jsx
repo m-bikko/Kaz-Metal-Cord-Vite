@@ -1,10 +1,9 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './NotFound.css';
 import {Link} from "react-router-dom";
 import InputMask from 'react-input-mask';
-import emailjs from '@emailjs/browser';
 import FileUploader from "../FileUploader/FileUploader.jsx";
-import fileUploader from "../FileUploader/FileUploader.jsx";
+import Popup from "../Popup/Popup";
 
 const NotFound = ({useBasketStyles}) => {
 
@@ -19,18 +18,13 @@ const NotFound = ({useBasketStyles}) => {
 
     const form = useRef();
 
-    const [clearFiles, setClearFiles] = useState(false);
-    const [inputMaskContent, setInputMaskContent] = useState('');
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleSendButton = () => {
-        form.current['from_name'].value = ''
-        form.current['from_tel'].value = ''
-        form.current['message'].value = ''
-        setInputMaskContent('')
         localStorage.removeItem('storedCard');
-        setClearFiles(true);
-        window.location.reload();
+        setIsOpen(true)
     }
+
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -44,9 +38,9 @@ const NotFound = ({useBasketStyles}) => {
         }).join('\n')}\n\nname: ${clientName}\nphone: ${clientPhone}\nmessage: ${clientMessage}`;
         const formData = new FormData();
 
-        formData.append('to', 'kazmetalcordkz@gmail.com'); // Set the recipient's email address as a constant
-        formData.append('subject', `Request from ${clientName}`); // Set the subject line to include the client's name
-        formData.append('text', messageContent); // Append the constructed message content
+        formData.append('to', 'kazmetalcordkz@gmail.com');
+        formData.append('subject', `Request from ${clientName}`);
+        formData.append('text', messageContent);
 
 
         const fileInput = document.querySelector('input[type="file"]');
@@ -72,7 +66,6 @@ const NotFound = ({useBasketStyles}) => {
             .catch((error) => {
                 console.log('FAILED...', error.message);
             });
-
     };
 
 
@@ -97,8 +90,7 @@ const NotFound = ({useBasketStyles}) => {
                         mask="+7 (999) 999 99 99"
                         maskChar="*"
                         placeholder="+7 (***) *** ** **"
-                        value={inputMaskContent}
-                        onChange={(e) => setInputMaskContent(e.target.value)}
+                        onChange={handleInput}
                     />
                     <input
                         name={`message`}
@@ -108,8 +100,7 @@ const NotFound = ({useBasketStyles}) => {
                 </div>
 
                 <div className={`upload-container`}>
-                    {/*<input name='files' type="file"/>*/}
-                    <FileUploader clearFiles={clearFiles} setClearFiles={setClearFiles}/>
+                    <FileUploader/>
                     <p>Заявка или карточка компании в формате txt, doc, pdf (максимум 4 МБ)</p>
                 </div>
 
@@ -118,6 +109,13 @@ const NotFound = ({useBasketStyles}) => {
                     <p>Нажимая кнопку, Вы соглашаетесь с <Link className={`link`} to={`policy`}>Политикой обработки персональных данных</Link></p>
                 </div>
             </div>
+
+            <Popup isOpen={isOpen} setIsOpen={setIsOpen} isSuccess={true}>
+                <div className={`successPopup`}>
+                    <img width={100} height={100} alt={``} src={'https://cdn-icons-png.flaticon.com/512/4436/4436481.png'}/>
+                    <p>Заявка успешна отправлена!</p>
+                </div>
+            </Popup>
         </form>
     );
 }

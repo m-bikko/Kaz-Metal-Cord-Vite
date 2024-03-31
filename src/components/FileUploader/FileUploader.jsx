@@ -2,7 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import './FileUploader.css';
 import removeIcon from '../../photos/image/remove.png';
 
-const FileUploader = ({ updateSelectedFiles, clearFiles, setClearFiles }) => {
+// , clearFiles, setClearFiles
+const FileUploader = ({ updateSelectedFiles }) => {
     const fileInputRef = useRef(null);
     const [selectedFiles, setSelectedFiles] = useState([]);
     const maxFileCount = 10;
@@ -25,12 +26,12 @@ const FileUploader = ({ updateSelectedFiles, clearFiles, setClearFiles }) => {
         updateSelectedFiles(updatedFiles); // Обновляем выбранные файлы в родительском компоненте
     };
 
-    useEffect(() => {
-        if (clearFiles) {
-            setSelectedFiles([]); // Clear selected files
-            setClearFiles(false); // Reset the clearFiles state
-        }
-    }, [clearFiles, setClearFiles]);
+    // useEffect(() => {
+    //     if (clearFiles) {
+    //         setSelectedFiles([]); // Clear selected files
+    //         setClearFiles(false); // Reset the clearFiles state
+    //     }
+    // }, [clearFiles, setClearFiles]);
 
     return (
         <div className="file-uploader">
