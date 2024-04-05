@@ -150,10 +150,10 @@ function Nav({onEnterPressed}){
                             улица Култегин, дом 19/1, кв. 362
                         </div>
                         <div>
-                            + 7 (xxx) xxx-xx-xx
+                            +7 (707) 704 97 22
                         </div>
                         <div>
-                            kazmetalcordkz@gmail.com
+                            kazmetalcordkz@mail.ru
                         </div>
                     </div>
                     <div>
