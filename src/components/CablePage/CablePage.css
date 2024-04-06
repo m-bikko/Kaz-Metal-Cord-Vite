@@ -118,6 +118,7 @@ button {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     .basket-card-price>p {
         margin-top: 0;

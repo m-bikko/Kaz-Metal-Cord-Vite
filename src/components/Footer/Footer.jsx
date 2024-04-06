@@ -93,10 +93,10 @@ function Footer(){
                                 улица Култегин, дом 19/1, кв. 362
                             </div>
                             <div>
-                                + 7 (727) 312-26-02
+                                +7 (707) 704 97-22
                             </div>
                             <div>
-                                zakaz@cablelines.kz
+                                kazmetalcordkz@mail.ru
                             </div>
                         </div>
 
