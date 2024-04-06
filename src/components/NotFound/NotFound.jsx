@@ -47,7 +47,7 @@ const NotFound = ({useBasketStyles}) => {
         }).join('\n')}\n\nname: ${clientName}\nphone: ${clientPhone}\nmessage: ${clientMessage}`;
         const formData = new FormData();
 
-        formData.append('to', 'kazmetalcordkz@gmail.com');
+        formData.append('to', 'kazmetalcordkz@mail.ru');
         formData.append('subject', `Request from ${clientName}`);
         formData.append('text', messageContent);
 
