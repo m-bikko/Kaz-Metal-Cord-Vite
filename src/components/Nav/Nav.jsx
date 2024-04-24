@@ -150,15 +150,19 @@ function Nav({onEnterPressed}){
                             улица Култегин, дом 19/1, кв. 362
                         </div>
                         <div>
-                            +7 (707) 704 97 22
+                            <a href="tel:87077049722">
+                                +7 (707) 704 97-22
+                            </a>
                         </div>
                         <div>
-                            kazmetalcordkz@mail.ru
+                            <a href="mailto: kazmetalcordkz@mail.ru">kazmetalcordkz@mail.ru</a>
                         </div>
                     </div>
                     <div>
                         <div className="responsive-nav-top-btn">
-                            Обратный звонок
+                            <a className="call-back" href="tel:87077049722">
+                                Обратный звонок
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -187,14 +191,18 @@ function Nav({onEnterPressed}){
                             улица Култегин, дом 19/1, кв. 362
                         </div>
                         <div>
-                            +7 (707) 704 97 22
+                            <a href="tel:87077049722">
+                                +7 (707) 704 97-22
+                            </a>
                         </div>
                         <div>
-                            kazmetalcordkz@mail.ru
+                            <a href="mailto: kazmetalcordkz@mail.ru">kazmetalcordkz@mail.ru</a>
                         </div>
                     </div>
                     <div className="nav-top-btn">
-                        Обратный звонок
+                        <a className="call-back" href="tel:87077049722">
+                            Обратный звонок
+                        </a>
                     </div>
                 </div>
                 <div className="nav-bottom">

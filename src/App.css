@@ -57,7 +57,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Tilda Sans Regular', sans-serif!important;
+    font-family: 'Tilda Sans Regular', sans-serif;
 }
 body{
     height: 100vh;
@@ -1139,4 +1139,11 @@ footer > div > *{
 .hover-underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+.call-back{
+    color: #6D2CC1;
+    text-decoration: none!important;
+}
+.call-back:hover{
+    color: white;
 }

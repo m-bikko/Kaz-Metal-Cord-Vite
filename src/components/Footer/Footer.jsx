@@ -81,7 +81,9 @@ function Footer(){
                 </div>
                 <div className="phone-call-section">
                     <div className="phone-call">
-                        Обратный звонок
+                        <a className="call-back" href="tel:87077049722">
+                            Обратный звонок
+                        </a>
                     </div>
                     <div className="adress">
                         <img src={compass} alt=""/>
