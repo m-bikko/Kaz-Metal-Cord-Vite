@@ -11,12 +11,12 @@ function Contacts(){
                 <div className="telephone-email">
                     <div>
                         <span>Телефон: </span>
-                        <div>+7 (707) 704 97-22</div>
+                        <div><a href="tel:87077049722"> +7 (707) 704 97-22</a></div>
                     </div>
 
                     <div>
                         <span>Почта: </span>
-                        <div>kazmetalcordkz@mail.ru</div>
+                        <div><a href="mailto: kazmetalcordkz@mail.ru"> kazmetalcordkz@mail.ru</a></div>
                     </div>
 
                 </div>
