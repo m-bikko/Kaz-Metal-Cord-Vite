@@ -57,7 +57,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Tilda Sans Regular', sans-serif;
+    font-family: 'Tilda Sans Regular', sans-serif!important;
 }
 body{
     height: 100vh;
