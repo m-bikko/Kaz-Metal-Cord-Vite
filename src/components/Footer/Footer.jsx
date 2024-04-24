@@ -93,9 +93,12 @@ function Footer(){
                                 улица Култегин, дом 19/1, кв. 362
                             </div>
                             <div>
-                                +7 (707) 704 97-22
+                                <a href="tel:87077049722">
+                                    +7 (707) 704 97-22
+                                </a>
                             </div>
                             <div>
+                                <a href="mailto: kazmetalcordkz@mail.ru"></a>
                                 kazmetalcordkz@mail.ru
                             </div>
                         </div>
