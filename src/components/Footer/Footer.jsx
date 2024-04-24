@@ -98,8 +98,7 @@ function Footer(){
                                 </a>
                             </div>
                             <div>
-                                <a href="mailto: kazmetalcordkz@mail.ru"></a>
-                                kazmetalcordkz@mail.ru
+                                <a href="mailto: kazmetalcordkz@mail.ru">kazmetalcordkz@mail.ru</a>
                             </div>
                         </div>
 
