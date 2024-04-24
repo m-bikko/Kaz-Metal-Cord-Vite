@@ -758,6 +758,10 @@ footer > div > *{
 .adress-txt > div{
     min-width: 200px;
 }
+.adress-txt > a{
+    text-decoration: none;
+    color: white;
+}
 @media only screen and (max-width: 1500px) {
     .product-name{
         font-size: 24px;
