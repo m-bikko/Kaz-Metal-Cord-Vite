@@ -758,9 +758,8 @@ footer > div > *{
 .adress-txt > div{
     min-width: 200px;
 }
-.adress-txt > a{
-    text-decoration: none;
-    color: white;
+.adress-txt a{
+    color: white!important;
 }
 @media only screen and (max-width: 1500px) {
     .product-name{
