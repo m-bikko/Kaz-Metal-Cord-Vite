@@ -25,7 +25,6 @@
 
 @media only screen and (max-width: 768px) {
     .delivery-title{
-        font-family: Tilda Sans, serif !important;
         font-size: 22px;
         font-weight: 600;
         line-height: 26px;

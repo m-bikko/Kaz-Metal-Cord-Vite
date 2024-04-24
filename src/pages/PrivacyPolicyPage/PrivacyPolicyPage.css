@@ -1,7 +1,7 @@
 
 
 .privacy-policy-title{
-    font-family: Tilda Sans, serif;
+    
     font-size: 36px!important;
     font-weight: 600!important;
     line-height: 43px;
@@ -16,7 +16,7 @@
     margin-bottom: 10px;
 }
 .privacy-policy-full *{
-    font-family: Tilda Sans, serif;
+    
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
@@ -36,7 +36,7 @@ ul{
 }
 @media only screen and(max-width: 768px){
     .privacy-policy-title{
-        font-family: Tilda Sans, serif;
+        
         font-size: 22px!important;
         font-weight: 600!important;
         line-height: 26px;
@@ -45,7 +45,7 @@ ul{
 
     }
     .privacy-policy-full *{
-        font-family: Tilda Sans, serif;
+        
         font-size: 16px!important;
         font-weight: 400!important;
         line-height: 19px!important;
