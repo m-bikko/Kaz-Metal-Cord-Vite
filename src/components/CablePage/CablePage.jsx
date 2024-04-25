@@ -76,7 +76,6 @@ const CablePage = ({cardData, filterCardData, cardImage, pageTitle}) => {
                                         useCablePageStyles={true}
                                         quantity={item.quantity}
                                         setCountQuantity={(newQuantity) => updateLocalStorage(newQuantity, idx)}
-                                        updateLocalStorage={(newQuantity) => updateLocalStorage(newQuantity, idx)}
                                     />
                                     <p>{item.price * item.quantity} тг.</p>
                                 </div>

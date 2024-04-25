@@ -1,12 +1,16 @@
 import React, {useState} from "react";
 import './Card.css'
 import Clicker from "../Clicker/Clicker.jsx";
+import Popup from "../Popup/Popup";
 
 const Card = ({ productId, image, name, description, price }) => {
     const [countQuantity, setCountQuantity] = useState(1)
+    const [isOpen, setIsOpen] = useState(false)
+
     const handleSetCountQuantity = (num) => {
         setCountQuantity(num)
     }
+
     const handleBuyClick = () => {
         const storedData = JSON.parse(localStorage.getItem('storedCard')) || [];
 
@@ -27,7 +31,9 @@ const Card = ({ productId, image, name, description, price }) => {
         }
 
         localStorage.setItem('storedCard', JSON.stringify(storedData));
+        setIsOpen(true)
     };
+
 
     return (
         <div className={`card`}>
@@ -43,6 +49,12 @@ const Card = ({ productId, image, name, description, price }) => {
                     </button>
                 </div>
             </div>
+            <Popup isOpen={isOpen} setIsOpen={setIsOpen} isNotFilled={true}>
+                <div className={`successPopup`}>
+                    <img src={'https://cdn-icons-png.flaticon.com/512/4436/4436481.png'} alt={``}/>
+                    <p className={`submitted-text`}>Товар успешно добавлен в корзину!</p>
+                </div>
+            </Popup>
         </div>
     );
 }

@@ -1,16 +1,18 @@
-// Clicker.jsx
-
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import './Clicker.css';
 
 const Clicker = ({ quantity = 1, setCountQuantity, useCablePageStyles }) => {
     const [count, setCount] = useState(quantity);
 
+    useEffect(() => {
+        setCount(quantity);
+    }, [quantity]);
+
+
     const handleIncrement = () => {
         const newCount = count + 1;
         setCount(newCount);
         setCountQuantity(newCount);
-        // updateLocalStorage(newCount);
     };
 
     const handleDecrement = () => {
@@ -18,7 +20,6 @@ const Clicker = ({ quantity = 1, setCountQuantity, useCablePageStyles }) => {
             const newCount = count - 1;
             setCount(newCount);
             setCountQuantity(newCount);
-            // updateLocalStorage(newCount);
         }
     };
 
