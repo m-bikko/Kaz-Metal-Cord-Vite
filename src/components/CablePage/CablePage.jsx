@@ -56,8 +56,6 @@ const CablePage = ({cardData, filterCardData, cardImage, pageTitle}) => {
                 <button onClick={() => handlePopupOpen()}><img src={basket} alt=""/></button>
             </div>
 
-            <Contact></Contact>
-
             <CableHints title={pageTitle}/>
             <div className="filter-text">
                 <h2>Фильтры</h2>
