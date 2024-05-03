@@ -41,6 +41,32 @@ button {
     object-fit: contain;
 }
 
+.contact-container {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    bottom: 15%;
+    right: 10px;
+}
+.contact-container.active{
+    display: none;
+}
+.contact-container button {
+    width: 70px;
+    height: 70px;
+    background-color: #17ead9;
+    border-radius: 50%;
+    border: none;
+}
+.contact-container button svg {
+    color: #fff;
+    width: 50%;
+    object-fit: contain;
+}
+
 
 .basket-card-container {
     min-height: 100px;

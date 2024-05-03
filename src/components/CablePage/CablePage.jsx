@@ -5,10 +5,12 @@ import Filter from "../Filter/Filter.jsx";
 import CardLoader from "../CardLoader/CardLoader.jsx";
 import Specification from "../Specification/Specification.jsx";
 import NotFound from "../NotFound/NotFound.jsx";
-import basket from "../../photos/image/Basket.png";
 import Popup from "../Popup/Popup.jsx";
 import Clicker from "../Clicker/Clicker.jsx";
 import remove from '../../photos/image/remove.png';
+import basket from "../../photos/image/Basket.png";
+import message from "../../photos/image/message-icon.svg";
+import Contact from "../Contact/Contact";
 
 const CablePage = ({cardData, filterCardData, cardImage, pageTitle}) => {
     const [isPopupOpen, setPopupOpen] = useState(false);
@@ -53,6 +55,9 @@ const CablePage = ({cardData, filterCardData, cardImage, pageTitle}) => {
             <div className={isPopupOpen ? "basket-container active" : "basket-container"}>
                 <button onClick={() => handlePopupOpen()}><img src={basket} alt=""/></button>
             </div>
+
+            <Contact></Contact>
+
             <CableHints title={pageTitle}/>
             <div className="filter-text">
                 <h2>Фильтры</h2>
