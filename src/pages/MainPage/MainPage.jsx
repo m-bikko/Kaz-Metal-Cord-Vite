@@ -77,7 +77,7 @@ function MainPage(){
                 </div>
                 <div className="products">
 
-                    <a className="product-container kabeli-silovye" href="kabeli-silovye">
+                    <a className="product-container kabeli-silovye" href="/kabeli-silovye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -88,7 +88,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container kabeli-kontrolnie" href="kabeli-kontrolnie">
+                    <a className="product-container kabeli-kontrolnie" href="/kabeli-kontrolnie">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -99,7 +99,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container kabeli-montazhnye" href="kabeli-montazhnye">
+                    <a className="product-container kabeli-montazhnye" href="/kabeli-montazhnye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -109,7 +109,7 @@ function MainPage(){
                             </div>
                         </div>
                     </a>
-                    <a className="product-container kabeli-peredachi-dannyh" href="kabeli-peredachi-dannyh">
+                    <a className="product-container kabeli-peredachi-dannyh" href="/kabeli-peredachi-dannyh">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -120,7 +120,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container radiochastotnye-koaksialnye-kabeli" href="radiochastotnye-koaksialnye-kabeli">
+                    <a className="product-container radiochastotnye-koaksialnye-kabeli" href="/radiochastotnye-koaksialnye-kabeli">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -131,7 +131,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container provoda-ustanovochnye" href="provoda-ustanovochnye">
+                    <a className="product-container provoda-ustanovochnye" href="/provoda-ustanovochnye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -142,7 +142,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container obmotochnye-provoda" href="obmotochnye-provoda">
+                    <a className="product-container obmotochnye-provoda" href="/obmotochnye-provoda">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -153,7 +153,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container soedinitelnye-provoda" href="soedinitelnye-provoda">
+                    <a className="product-container soedinitelnye-provoda" href="/soedinitelnye-provoda">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -164,7 +164,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container provoda-vodopogruzhnye" href="provoda-vodopogruzhnye">
+                    <a className="product-container provoda-vodopogruzhnye" href="/provoda-vodopogruzhnye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -175,7 +175,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container provoda-silovye" href="provoda-silovye">
+                    <a className="product-container provoda-silovye" href="/provoda-silovye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -186,7 +186,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container provoda-vozdushnyh-linij-ehlektroperedach" href="provoda-vozdushnyh-linij-ehlektroperedach">
+                    <a className="product-container provoda-vozdushnyh-linij-ehlektroperedach" href="/provoda-vozdushnyh-linij-ehlektroperedach">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -197,7 +197,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container provoda-bytovye" href="provoda-bytovye">
+                    <a className="product-container provoda-bytovye" href="/provoda-bytovye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -208,7 +208,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container provoda-bortovye-aviacionnye" href="provoda-bortovye-aviacionnye">
+                    <a className="product-container provoda-bortovye-aviacionnye" href="/provoda-bortovye-aviacionnye">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -219,7 +219,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container neizolirovannye-provoda" href="neizolirovannye-provoda">
+                    <a className="product-container neizolirovannye-provoda" href="/neizolirovannye-provoda">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -230,7 +230,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container transformatory" href="transformatory">
+                    <a className="product-container transformatory" href="/transformatory">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -241,7 +241,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container osveshchenie" href="osveshchenie">
+                    <a className="product-container osveshchenie" href="/osveshchenie">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -252,7 +252,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container truby-kabel-kanaly" href="truby-kabel-kanaly">
+                    <a className="product-container truby-kabel-kanaly" href="/truby-kabel-kanaly">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
@@ -263,7 +263,7 @@ function MainPage(){
                         </div>
                     </a>
 
-                    <a className="product-container kabelnye-mufty-i-nakonechniki" href="kabelnye-mufty-i-nakonechniki">
+                    <a className="product-container kabelnye-mufty-i-nakonechniki" href="/kabelnye-mufty-i-nakonechniki">
                         <div className="product-background">
                             <div className="product-content">
                                 <div className="product-name">
