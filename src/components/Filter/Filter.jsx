@@ -12,8 +12,8 @@ function Filter({ saveData, filterData }) {
     }
 
     const handleFilterChange = (type, values) => {
-        if (values.length === 0) { // Если нет выбранных данных
-            setSelectedFilters(null); // Установить selectedFilters в null
+        if (values.length === 0) {
+            setSelectedFilters(null);
         }
         else {
             setSelectedFilters((prevFilters) => ({
@@ -30,7 +30,6 @@ function Filter({ saveData, filterData }) {
 
     return (
         <div className={`filter`}>
-            {/*<button onClick={()=>{}>Change data</button>*/}
             <button className={`filter-button ${isActive? 'active':''}`} onClick={handleIsActive}>
                 {
                     isActive ?
@@ -53,29 +52,8 @@ function Filter({ saveData, filterData }) {
                             checkbox={filterData}
                             onFilterChange={handleFilterChange}
                         />
-                        // <div>{filterItem}</div>
                     ))
                 }
-                {/*<FilterAccordion*/}
-                {/*    type={`Количество скруток`}*/}
-                {/*    checkbox={filterData}*/}
-                {/*    onFilterChange={handleFilterChange}*/}
-                {/*/>*/}
-                {/*<FilterAccordion*/}
-                {/*    type={`Количество жил`}*/}
-                {/*    checkbox={filterData}*/}
-                {/*    onFilterChange={handleFilterChange}*/}
-                {/*/>*/}
-                {/*<FilterAccordion*/}
-                {/*    type={`Марка`}*/}
-                {/*    checkbox={filterData}*/}
-                {/*    onFilterChange={handleFilterChange}*/}
-                {/*/>*/}
-                {/*<FilterAccordion*/}
-                {/*    type={`Размер сечения, мм2`}*/}
-                {/*    checkbox={filterData}*/}
-                {/*    onFilterChange={handleFilterChange}*/}
-                {/*/>*/}
             </div>
         </div>
     )

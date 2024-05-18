@@ -36,9 +36,9 @@ const CablePage = ({cardData, filterCardData, cardImage, pageTitle}) => {
         setCartItems(updatedCartItems);
     };
 
-    const calculateTotalPrice = () => {
-        return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-    };
+    // const calculateTotalPrice = () => {
+    //     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    // };
 
     const handlePopupOpen = () => {
         const storedCardData = JSON.parse(localStorage.getItem('storedCard')) || [];
@@ -80,7 +80,7 @@ const CablePage = ({cardData, filterCardData, cardImage, pageTitle}) => {
                                         quantity={item.quantity}
                                         setCountQuantity={(newQuantity) => updateLocalStorage(newQuantity, idx)}
                                     />
-                                    <p>{item.price * item.quantity} тг.</p>
+                                    {/*<p>{item.price * item.quantity} тг.</p>*/}
                                 </div>
                             </div>
                             <button className="remove-card" onClick={() => handleRemoveCard(idx)}>
@@ -90,7 +90,7 @@ const CablePage = ({cardData, filterCardData, cardImage, pageTitle}) => {
                     ))}
                 </div>
                 <div>
-                    <p className="basket-total">Total: {calculateTotalPrice()} тг.</p>
+                    {/*<p className="basket-total">Total: {calculateTotalPrice()} тг.</p>*/}
                 </div>
                 <NotFound useBasketStyles={true}/>
             </Popup>

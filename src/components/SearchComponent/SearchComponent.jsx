@@ -73,7 +73,6 @@ const SearchComponent = () => {
                         name={item.name}
                         description={item.description}
                         image={obj[item.category] || default_image}
-                        price={item.price}
                     />
                 ))}
             </div>

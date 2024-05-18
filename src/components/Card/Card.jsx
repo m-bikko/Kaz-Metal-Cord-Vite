@@ -3,7 +3,7 @@ import './Card.css'
 import Clicker from "../Clicker/Clicker.jsx";
 import Popup from "../Popup/Popup";
 
-const Card = ({ productId, image, name, description, price }) => {
+const Card = ({ productId, image, name, description }) => {
     const [countQuantity, setCountQuantity] = useState(1)
     const [isOpen, setIsOpen] = useState(false)
 
@@ -25,7 +25,6 @@ const Card = ({ productId, image, name, description, price }) => {
                 image,
                 name,
                 description,
-                price,
                 quantity: countQuantity,
             });
         }
@@ -41,7 +40,6 @@ const Card = ({ productId, image, name, description, price }) => {
             <div className={`card-content`}>
                 <p className={`description`}>{name}</p>
                 <p className={`hint`}>В связи с высокой волатильностью отпускных цен, актуальную стоимость уточняйте у менеджера</p>
-                <p className={`price`}>от {price} тг.</p>
                 <div className={`button-container`}>
                     <Clicker setCountQuantity={handleSetCountQuantity}/>
                     <button className={`buy`} onClick={handleBuyClick}>

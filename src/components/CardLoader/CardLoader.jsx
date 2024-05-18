@@ -44,7 +44,7 @@ const CardLoader = ({selectedData, cardData, cardImage}) => {
         <div className={`card-loader`}>
             <div className={`card-container`}>
                 {filteredCards.slice(0, visibleCards).map((item, idx) => (
-                    <Card key={idx} image={cardImage} name={item.name} description={item.category} price={item.price} productId={idx} />
+                    <Card key={idx} image={cardImage} name={item.name} description={item.category} productId={idx} />
                 ))}
             </div>
             {
